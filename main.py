@@ -16,6 +16,13 @@ def fetch(domain):
             result[protocol]['final-url'] = resp.url
             result[protocol]['status'] = resp.status_code
             result[protocol]['headers'] = resp.headers
+
+            html_doc = bs4.BeautifulSoup(resp.text, "html.parser")
+            result[protocol]['meta'] = [m.attrs for m in html_doc.find_all('meta')]
+            result[protocol]['links'] = [l.get('href') for l in html_doc.find_all('link') if l.get('href')]
+            result[protocol]['scripts'] = [s.get('src') for s in html_doc.find_all('script') if s.get('src')]
+            result[protocol]['anchors'] = [a.get('href') for a in html_doc.find_all('a') if a.get('href')]
+
         except requests.exceptions.Timeout:
             result[protocol]['error'] = 'timeout'
         except requests.exceptions.SSLError:
@@ -24,16 +31,23 @@ def fetch(domain):
             result[protocol]['error'] = 'connection_error'
         except:
             print("Unexpected error:", sys.exc_info()[0])
-    return result
 
+    result['dns'] = {'error' : {}}
+    for record_type in ['A', 'CNAME', 'MX', 'TXT']:
+        try:
+            result['dns'][record_type] = [record.to_text() for record in dns.resolver.resolve(domain, record_type)]
+        except dns.resolver.NoAnswer:
+            result['dns']['error'][record_type] = 'dns_error - No Answer'
+        except dns.resolver.NXDOMAIN:
+            result['dns']['error'][record_type] = 'dns_error - NXDOMAIN'
+    return result
 
 domain = "google.com"
 reqResult = requests.get("https://" + domain)
 
-html_doc = bs4.BeautifulSoup(reqResult.text, "html.parser")
 
-print(fetch(domain))
 
+print(fetch(domain)['dns'])
 
 
 
