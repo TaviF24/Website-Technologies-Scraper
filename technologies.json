@@ -1,0 +1,51 @@
+{
+  "technologies": [
+    {
+      "name": "WordPress",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "wp-content",
+          "weight": 40
+        },
+        {
+          "type": "meta",
+          "key": "generator",
+          "pattern": "WordPress",
+          "weight": 50
+        },
+        {
+          "type": "cookie",
+          "pattern": "wordpress_",
+          "weight": 50
+        },
+        {
+          "type": "script",
+          "pattern": "wp-includes",
+          "weight": 30
+        }
+      ]
+    },
+    {
+      "name": "Cloudflare",
+      "category": "infra",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "header",
+          "key": "cf-ray",
+          "pattern": "",
+          "condition": "exists",
+          "weight": 60
+        },
+        {
+          "type": "dns",
+          "pattern": "cloudflare",
+          "weight": 40
+        }
+      ]
+    }
+  ]
+}
