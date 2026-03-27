@@ -1,31 +1,221 @@
 {
   "technologies": [
+
+    {
+      "name": "Google Analytics",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {"type": "script", "pattern": "googletagmanager.com", "weight": 40},
+        {"type": "script", "pattern": "google-analytics.com", "weight": 40},
+        {"type": "html", "pattern": "gtag(", "weight": 20}
+      ]
+    },
+
+    {
+      "name": "Google Tag Manager",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {"type": "script", "pattern": "googletagmanager.com/gtm.js", "weight": 50},
+        {"type": "html", "pattern": "GTM-", "weight": 30}
+      ]
+    },
+
+    {
+      "name": "Bootstrap",
+      "category": "frontend",
+      "threshold": 40,
+      "rules": [
+        {"type": "html", "pattern": "bootstrap", "weight": 20},
+        {"type": "script", "pattern": "bootstrap.min.js", "weight": 30},
+        {"type": "link", "pattern": "bootstrap.min.css", "weight": 30}
+      ]
+    },
+
+    {
+      "name": "jQuery",
+      "category": "frontend",
+      "threshold": 30,
+      "rules": [
+        {"type": "script", "pattern": "jquery", "weight": 30}
+      ]
+    },
+
+    {
+      "name": "React",
+      "category": "frontend",
+      "threshold": 50,
+      "rules": [
+        {"type": "html", "pattern": "react", "weight": 20},
+        {"type": "script", "pattern": "react", "weight": 30},
+        {"type": "html", "pattern": "data-reactroot", "weight": 40}
+      ]
+    },
+
+    {
+      "name": "Vue.js",
+      "category": "frontend",
+      "threshold": 50,
+      "rules": [
+        {"type": "html", "pattern": "vue", "weight": 20},
+        {"type": "script", "pattern": "vue", "weight": 30}
+      ]
+    },
+
+    {
+      "name": "Angular",
+      "category": "frontend",
+      "threshold": 50,
+      "rules": [
+        {"type": "html", "pattern": "ng-", "weight": 30},
+        {"type": "html", "pattern": "angular", "weight": 20}
+      ]
+    },
+
+    {
+      "name": "Next.js",
+      "category": "frontend",
+      "threshold": 50,
+      "rules": [
+        {"type": "html", "pattern": "__NEXT_DATA__", "weight": 50}
+      ]
+    },
+
+    {
+      "name": "Nuxt.js",
+      "category": "frontend",
+      "threshold": 50,
+      "rules": [
+        {"type": "html", "pattern": "__NUXT__", "weight": 50}
+      ]
+    },
+
+    {
+      "name": "Shopify",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {"type": "html", "pattern": "cdn.shopify.com", "weight": 50},
+        {"type": "script", "pattern": "shopify", "weight": 30},
+        {"type": "cookie", "pattern": "_shopify", "weight": 40}
+      ]
+    },
+
+    {
+      "name": "Wix",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {"type": "html", "pattern": "wix.com", "weight": 50},
+        {"type": "script", "pattern": "wix", "weight": 30}
+      ]
+    },
+
+    {
+      "name": "Squarespace",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {"type": "html", "pattern": "squarespace", "weight": 50},
+        {"type": "script", "pattern": "squarespace", "weight": 30}
+      ]
+    },
+
+    {
+      "name": "Cloudfront",
+      "category": "infra",
+      "threshold": 50,
+      "rules": [
+        {"type": "script", "pattern": "cloudfront.net", "weight": 50},
+        {"type": "dns", "pattern": "cloudfront", "weight": 40}
+      ]
+    },
+
+    {
+      "name": "Akamai",
+      "category": "infra",
+      "threshold": 50,
+      "rules": [
+        {"type": "script", "pattern": "akamai", "weight": 40},
+        {"type": "dns", "pattern": "akamai", "weight": 40}
+      ]
+    },
+
+    {
+      "name": "Hotjar",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {"type": "script", "pattern": "hotjar", "weight": 50}
+      ]
+    },
+
+    {
+      "name": "Facebook Pixel",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {"type": "script", "pattern": "connect.facebook.net", "weight": 50},
+        {"type": "html", "pattern": "fbq(", "weight": 30}
+      ]
+    },
+
+    {
+      "name": "Google Fonts",
+      "category": "frontend",
+      "threshold": 30,
+      "rules": [
+        {"type": "link", "pattern": "fonts.googleapis.com", "weight": 40}
+      ]
+    },
+
+    {
+      "name": "Font Awesome",
+      "category": "frontend",
+      "threshold": 30,
+      "rules": [
+        {"type": "link", "pattern": "font-awesome", "weight": 30},
+        {"type": "script", "pattern": "fontawesome", "weight": 30}
+      ]
+    },
+
+    {
+      "name": "PHP",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {"type": "header", "key": "x-powered-by", "pattern": "php", "weight": 50},
+        {"type": "cookie", "pattern": "phpsessid", "weight": 40}
+      ]
+    },
+
+    {
+      "name": "Nginx",
+      "category": "infra",
+      "threshold": 40,
+      "rules": [
+        {"type": "header", "key": "server", "pattern": "nginx", "weight": 50}
+      ]
+    },
+
+    {
+      "name": "Apache",
+      "category": "infra",
+      "threshold": 40,
+      "rules": [
+        {"type": "header", "key": "server", "pattern": "apache", "weight": 50}
+      ]
+    },
     {
       "name": "WordPress",
       "category": "cms",
       "threshold": 60,
       "rules": [
-        {
-          "type": "html",
-          "pattern": "wp-content",
-          "weight": 40
-        },
-        {
-          "type": "meta",
-          "key": "generator",
-          "pattern": "WordPress",
-          "weight": 50
-        },
-        {
-          "type": "cookie",
-          "pattern": "wordpress_",
-          "weight": 50
-        },
-        {
-          "type": "script",
-          "pattern": "wp-includes",
-          "weight": 30
-        }
+        {"type": "html", "pattern": "wp-content", "weight": 40},
+        {"type": "meta", "key": "generator", "pattern": "WordPress", "weight": 50},
+        {"type": "cookie", "pattern": "wordpress_", "weight": 50},
+        {"type": "script", "pattern": "wp-includes", "weight": 30}
       ]
     },
     {
@@ -33,19 +223,250 @@
       "category": "infra",
       "threshold": 50,
       "rules": [
-        {
-          "type": "header",
-          "key": "cf-ray",
-          "pattern": "",
-          "condition": "exists",
-          "weight": 60
-        },
-        {
-          "type": "dns",
-          "pattern": "cloudflare",
-          "weight": 40
-        }
+        {"type": "header", "key": "cf-ray", "pattern": "", "weight": 60},
+        {"type": "dns", "pattern": "cloudflare", "weight": 40}
+      ]
+    },
+    {
+      "name": "Drupal",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {"type": "html", "pattern": "sites/default/files", "weight": 50},
+        {"type": "html", "pattern": "Drupal.settings", "weight": 50},
+        {"type": "meta", "key": "generator", "pattern": "Drupal", "weight": 60},
+        {"type": "cookie", "pattern": "Drupal.visitor", "weight": 40},
+        {"type": "header", "key": "x-generator", "pattern": "Drupal", "weight": 60}
+      ]
+    },
+    {
+      "name": "Joomla",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {"type": "meta", "key": "generator", "pattern": "Joomla", "weight": 60},
+        {"type": "html", "pattern": "/media/jui/", "weight": 40},
+        {"type": "html", "pattern": "joomla", "weight": 30}
+      ]
+    },
+    {
+      "name": "Magento",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {"type": "html", "pattern": "Mage.Cookies", "weight": 50},
+        {"type": "html", "pattern": "/skin/frontend/", "weight": 40},
+        {"type": "cookie", "pattern": "frontend", "weight": 30},
+        {"type": "script", "pattern": "mage/", "weight": 40}
+      ]
+    },
+    {
+      "name": "Webflow",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {"type": "html", "pattern": "webflow", "weight": 40},
+        {"type": "script", "pattern": "webflow.js", "weight": 50},
+        {"type": "header", "key": "x-powered-by", "pattern": "Webflow", "weight": 60}
+      ]
+    },
+    {
+      "name": "Ghost",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {"type": "meta", "key": "generator", "pattern": "Ghost", "weight": 60},
+        {"type": "html", "pattern": "ghost.io", "weight": 40},
+        {"type": "script", "pattern": "ghost", "weight": 30}
+      ]
+    },
+    {
+      "name": "Svelte",
+      "category": "frontend",
+      "threshold": 50,
+      "rules": [
+        {"type": "html", "pattern": "__svelte", "weight": 50},
+        {"type": "script", "pattern": "svelte", "weight": 40}
+      ]
+    },
+    {
+      "name": "Tailwind CSS",
+      "category": "frontend",
+      "threshold": 40,
+      "rules": [
+        {"type": "html", "pattern": "tailwind", "weight": 30},
+        {"type": "link", "pattern": "tailwind", "weight": 40}
+      ]
+    },
+    {
+      "name": "Gatsby",
+      "category": "frontend",
+      "threshold": 50,
+      "rules": [
+        {"type": "html", "pattern": "___gatsby", "weight": 60},
+        {"type": "html", "pattern": "gatsby-", "weight": 30}
+      ]
+    },
+    {
+      "name": "Amazon AWS",
+      "category": "infra",
+      "threshold": 50,
+      "rules": [
+        {"type": "header", "key": "server", "pattern": "AmazonS3", "weight": 50},
+        {"type": "header", "key": "x-amz-request-id", "pattern": "", "weight": 60},
+        {"type": "dns", "pattern": "amazonaws.com", "weight": 50}
+      ]
+    },
+    {
+      "name": "Vercel",
+      "category": "infra",
+      "threshold": 50,
+      "rules": [
+        {"type": "header", "key": "x-vercel-id", "pattern": "", "weight": 60},
+        {"type": "dns", "pattern": "vercel.app", "weight": 50},
+        {"type": "header", "key": "server", "pattern": "Vercel", "weight": 50}
+      ]
+    },
+    {
+      "name": "Netlify",
+      "category": "infra",
+      "threshold": 50,
+      "rules": [
+        {"type": "header", "key": "x-nf-request-id", "pattern": "", "weight": 60},
+        {"type": "dns", "pattern": "netlify.app", "weight": 50},
+        {"type": "header", "key": "server", "pattern": "Netlify", "weight": 50}
+      ]
+    },
+    {
+      "name": "Microsoft IIS",
+      "category": "infra",
+      "threshold": 40,
+      "rules": [
+        {"type": "header", "key": "server", "pattern": "IIS", "weight": 50},
+        {"type": "header", "key": "x-powered-by", "pattern": "ASP.NET", "weight": 40}
+      ]
+    },
+    {
+      "name": "ASP.NET",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {"type": "header", "key": "x-powered-by", "pattern": "ASP.NET", "weight": 50},
+        {"type": "cookie", "pattern": "ASP.NET_SessionId", "weight": 60},
+        {"type": "cookie", "pattern": "__RequestVerificationToken", "weight": 40}
+      ]
+    },
+    {
+      "name": "Java",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {"type": "cookie", "pattern": "JSESSIONID", "weight": 60},
+        {"type": "header", "key": "x-powered-by", "pattern": "JSP", "weight": 50},
+        {"type": "header", "key": "x-powered-by", "pattern": "Servlet", "weight": 50}
+      ]
+    },
+    {
+      "name": "Ruby on Rails",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {"type": "header", "key": "x-powered-by", "pattern": "Phusion Passenger", "weight": 50},
+        {"type": "cookie", "pattern": "_session_id", "weight": 30},
+        {"type": "header", "key": "x-runtime", "pattern": "", "weight": 50}
+      ]
+    },
+    {
+      "name": "Intercom",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {"type": "script", "pattern": "intercom", "weight": 50},
+        {"type": "html", "pattern": "intercomSettings", "weight": 40}
+      ]
+    },
+    {
+      "name": "Zendesk",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {"type": "script", "pattern": "zendesk.com", "weight": 50},
+        {"type": "script", "pattern": "zdassets.com", "weight": 50}
+      ]
+    },
+    {
+      "name": "Hubspot",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {"type": "script", "pattern": "hs-scripts.com", "weight": 50},
+        {"type": "script", "pattern": "hubspot.com", "weight": 40},
+        {"type": "cookie", "pattern": "__hstc", "weight": 50}
+      ]
+    },
+    {
+      "name": "Mixpanel",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {"type": "script", "pattern": "mixpanel.com", "weight": 50},
+        {"type": "html", "pattern": "mixpanel.init", "weight": 40}
+      ]
+    },
+    {
+      "name": "Segment",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {"type": "script", "pattern": "cdn.segment.com", "weight": 60},
+        {"type": "html", "pattern": "analytics.load", "weight": 30}
+      ]
+    },
+    {
+      "name": "Google Maps",
+      "category": "frontend",
+      "threshold": 40,
+      "rules": [
+        {"type": "script", "pattern": "maps.googleapis.com", "weight": 60},
+        {"type": "html", "pattern": "google.maps", "weight": 40}
+      ]
+    },
+    {
+      "name": "Stripe",
+      "category": "payment",
+      "threshold": 50,
+      "rules": [
+        {"type": "script", "pattern": "js.stripe.com", "weight": 60},
+        {"type": "html", "pattern": "Stripe(", "weight": 40}
+      ]
+    },
+    {
+      "name": "PayPal",
+      "category": "payment",
+      "threshold": 50,
+      "rules": [
+        {"type": "script", "pattern": "paypal.com/sdk", "weight": 60},
+        {"type": "html", "pattern": "paypal.Buttons", "weight": 40}
+      ]
+    },
+    {
+      "name": "Google Workspace",
+      "category": "email",
+      "threshold": 50,
+      "rules": [
+        {"type": "dns", "pattern": "google.com", "weight": 50},
+        {"type": "dns", "pattern": "aspmx.l.google.com", "weight": 60}
+      ]
+    },
+    {
+      "name": "Microsoft 365",
+      "category": "email",
+      "threshold": 50,
+      "rules": [
+        {"type": "dns", "pattern": "outlook.com", "weight": 60},
+        {"type": "dns", "pattern": "protection.outlook.com", "weight": 60}
       ]
     }
+
   ]
 }
