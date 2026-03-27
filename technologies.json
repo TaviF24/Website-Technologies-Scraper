@@ -1,210 +1,368 @@
 {
   "technologies": [
-
     {
       "name": "Google Analytics",
       "category": "analytics",
       "threshold": 40,
       "rules": [
-        {"type": "script", "pattern": "googletagmanager.com", "weight": 40},
-        {"type": "script", "pattern": "google-analytics.com", "weight": 40},
-        {"type": "html", "pattern": "gtag(", "weight": 20}
+        {
+          "type": "script",
+          "pattern": "googletagmanager.com",
+          "weight": 40
+        },
+        {
+          "type": "script",
+          "pattern": "google-analytics.com",
+          "weight": 40
+        },
+        {
+          "type": "html",
+          "pattern": "gtag(",
+          "weight": 20
+        }
       ]
     },
-
     {
       "name": "Google Tag Manager",
       "category": "analytics",
       "threshold": 40,
       "rules": [
-        {"type": "script", "pattern": "googletagmanager.com/gtm.js", "weight": 50},
-        {"type": "html", "pattern": "GTM-", "weight": 30}
+        {
+          "type": "script",
+          "pattern": "googletagmanager.com/gtm.js",
+          "weight": 50
+        },
+        {
+          "type": "html",
+          "pattern": "GTM-",
+          "weight": 30
+        }
       ]
     },
-
     {
       "name": "Bootstrap",
       "category": "frontend",
       "threshold": 40,
       "rules": [
-        {"type": "html", "pattern": "bootstrap", "weight": 20},
-        {"type": "script", "pattern": "bootstrap.min.js", "weight": 30},
-        {"type": "link", "pattern": "bootstrap.min.css", "weight": 30}
+        {
+          "type": "html",
+          "pattern": "bootstrap",
+          "weight": 20
+        },
+        {
+          "type": "script",
+          "pattern": "bootstrap.min.js",
+          "weight": 30
+        },
+        {
+          "type": "link",
+          "pattern": "bootstrap.min.css",
+          "weight": 30
+        }
       ]
     },
-
     {
       "name": "jQuery",
       "category": "frontend",
       "threshold": 30,
       "rules": [
-        {"type": "script", "pattern": "jquery", "weight": 30}
+        {
+          "type": "script",
+          "pattern": "jquery",
+          "weight": 30
+        }
       ]
     },
-
     {
       "name": "React",
       "category": "frontend",
       "threshold": 50,
       "rules": [
-        {"type": "html", "pattern": "react", "weight": 20},
-        {"type": "script", "pattern": "react", "weight": 30},
-        {"type": "html", "pattern": "data-reactroot", "weight": 40}
+        {
+          "type": "html",
+          "pattern": "react",
+          "weight": 20
+        },
+        {
+          "type": "script",
+          "pattern": "react",
+          "weight": 30
+        },
+        {
+          "type": "html",
+          "pattern": "data-reactroot",
+          "weight": 40
+        }
       ]
     },
-
     {
       "name": "Vue.js",
       "category": "frontend",
       "threshold": 50,
       "rules": [
-        {"type": "html", "pattern": "vue", "weight": 20},
-        {"type": "script", "pattern": "vue", "weight": 30}
+        {
+          "type": "html",
+          "pattern": "vue",
+          "weight": 20
+        },
+        {
+          "type": "script",
+          "pattern": "vue",
+          "weight": 30
+        }
       ]
     },
-
     {
       "name": "Angular",
       "category": "frontend",
       "threshold": 50,
       "rules": [
-        {"type": "html", "pattern": "ng-", "weight": 30},
-        {"type": "html", "pattern": "angular", "weight": 20}
+        {
+          "type": "html",
+          "pattern": "ng-",
+          "weight": 30
+        },
+        {
+          "type": "html",
+          "pattern": "angular",
+          "weight": 20
+        }
       ]
     },
-
     {
       "name": "Next.js",
       "category": "frontend",
       "threshold": 50,
       "rules": [
-        {"type": "html", "pattern": "__NEXT_DATA__", "weight": 50}
+        {
+          "type": "html",
+          "pattern": "__NEXT_DATA__",
+          "weight": 50
+        }
       ]
     },
-
     {
       "name": "Nuxt.js",
       "category": "frontend",
       "threshold": 50,
       "rules": [
-        {"type": "html", "pattern": "__NUXT__", "weight": 50}
+        {
+          "type": "html",
+          "pattern": "__NUXT__",
+          "weight": 50
+        }
       ]
     },
-
     {
       "name": "Shopify",
       "category": "cms",
       "threshold": 60,
       "rules": [
-        {"type": "html", "pattern": "cdn.shopify.com", "weight": 50},
-        {"type": "script", "pattern": "shopify", "weight": 30},
-        {"type": "cookie", "pattern": "_shopify", "weight": 40}
+        {
+          "type": "html",
+          "pattern": "cdn.shopify.com",
+          "weight": 50
+        },
+        {
+          "type": "script",
+          "pattern": "shopify",
+          "weight": 30
+        },
+        {
+          "type": "cookie",
+          "pattern": "_shopify",
+          "weight": 40
+        },
+        {
+          "type": "final-url",
+          "pattern": "myshopify.com",
+          "weight": 70
+        }
       ]
     },
-
     {
       "name": "Wix",
       "category": "cms",
       "threshold": 60,
       "rules": [
-        {"type": "html", "pattern": "wix.com", "weight": 50},
-        {"type": "script", "pattern": "wix", "weight": 30}
+        {
+          "type": "html",
+          "pattern": "wix.com",
+          "weight": 50
+        },
+        {
+          "type": "script",
+          "pattern": "wix",
+          "weight": 30
+        },
+        {
+          "type": "final-url",
+          "pattern": "wixsite.com",
+          "weight": 70
+        }
       ]
     },
-
     {
       "name": "Squarespace",
       "category": "cms",
       "threshold": 60,
       "rules": [
-        {"type": "html", "pattern": "squarespace", "weight": 50},
-        {"type": "script", "pattern": "squarespace", "weight": 30}
+        {
+          "type": "html",
+          "pattern": "squarespace",
+          "weight": 50
+        },
+        {
+          "type": "script",
+          "pattern": "squarespace",
+          "weight": 30
+        },
+        {
+          "type": "final-url",
+          "pattern": "squarespace.com",
+          "weight": 70
+        }
       ]
     },
-
     {
       "name": "Cloudfront",
       "category": "infra",
       "threshold": 50,
       "rules": [
-        {"type": "script", "pattern": "cloudfront.net", "weight": 50},
-        {"type": "dns", "pattern": "cloudfront", "weight": 40}
+        {
+          "type": "script",
+          "pattern": "cloudfront.net",
+          "weight": 50
+        },
+        {
+          "type": "dns",
+          "pattern": "cloudfront",
+          "weight": 40
+        },
+        {
+          "type": "final-url",
+          "pattern": "cloudfront.net",
+          "weight": 70
+        }
       ]
     },
-
     {
       "name": "Akamai",
       "category": "infra",
       "threshold": 50,
       "rules": [
-        {"type": "script", "pattern": "akamai", "weight": 40},
-        {"type": "dns", "pattern": "akamai", "weight": 40}
+        {
+          "type": "script",
+          "pattern": "akamai",
+          "weight": 40
+        },
+        {
+          "type": "dns",
+          "pattern": "akamai",
+          "weight": 40
+        }
       ]
     },
-
     {
       "name": "Hotjar",
       "category": "analytics",
       "threshold": 40,
       "rules": [
-        {"type": "script", "pattern": "hotjar", "weight": 50}
+        {
+          "type": "script",
+          "pattern": "hotjar",
+          "weight": 50
+        }
       ]
     },
-
     {
       "name": "Facebook Pixel",
       "category": "analytics",
       "threshold": 40,
       "rules": [
-        {"type": "script", "pattern": "connect.facebook.net", "weight": 50},
-        {"type": "html", "pattern": "fbq(", "weight": 30}
+        {
+          "type": "script",
+          "pattern": "connect.facebook.net",
+          "weight": 50
+        },
+        {
+          "type": "html",
+          "pattern": "fbq(",
+          "weight": 30
+        }
       ]
     },
-
     {
       "name": "Google Fonts",
       "category": "frontend",
       "threshold": 30,
       "rules": [
-        {"type": "link", "pattern": "fonts.googleapis.com", "weight": 40}
+        {
+          "type": "link",
+          "pattern": "fonts.googleapis.com",
+          "weight": 40
+        }
       ]
     },
-
     {
       "name": "Font Awesome",
       "category": "frontend",
       "threshold": 30,
       "rules": [
-        {"type": "link", "pattern": "font-awesome", "weight": 30},
-        {"type": "script", "pattern": "fontawesome", "weight": 30}
+        {
+          "type": "link",
+          "pattern": "font-awesome",
+          "weight": 30
+        },
+        {
+          "type": "script",
+          "pattern": "fontawesome",
+          "weight": 30
+        }
       ]
     },
-
     {
       "name": "PHP",
       "category": "backend",
       "threshold": 40,
       "rules": [
-        {"type": "header", "key": "x-powered-by", "pattern": "php", "weight": 50},
-        {"type": "cookie", "pattern": "phpsessid", "weight": 40}
+        {
+          "type": "header",
+          "key": "x-powered-by",
+          "pattern": "php",
+          "weight": 50
+        },
+        {
+          "type": "cookie",
+          "pattern": "phpsessid",
+          "weight": 40
+        }
       ]
     },
-
     {
       "name": "Nginx",
       "category": "infra",
       "threshold": 40,
       "rules": [
-        {"type": "header", "key": "server", "pattern": "nginx", "weight": 50}
+        {
+          "type": "header",
+          "key": "server",
+          "pattern": "nginx",
+          "weight": 50
+        }
       ]
     },
-
     {
       "name": "Apache",
       "category": "infra",
       "threshold": 40,
       "rules": [
-        {"type": "header", "key": "server", "pattern": "apache", "weight": 50}
+        {
+          "type": "header",
+          "key": "server",
+          "pattern": "apache",
+          "weight": 50
+        }
       ]
     },
     {
@@ -212,10 +370,32 @@
       "category": "cms",
       "threshold": 60,
       "rules": [
-        {"type": "html", "pattern": "wp-content", "weight": 40},
-        {"type": "meta", "key": "generator", "pattern": "WordPress", "weight": 50},
-        {"type": "cookie", "pattern": "wordpress_", "weight": 50},
-        {"type": "script", "pattern": "wp-includes", "weight": 30}
+        {
+          "type": "html",
+          "pattern": "wp-content",
+          "weight": 40
+        },
+        {
+          "type": "meta",
+          "key": "generator",
+          "pattern": "WordPress",
+          "weight": 50
+        },
+        {
+          "type": "cookie",
+          "pattern": "wordpress_",
+          "weight": 50
+        },
+        {
+          "type": "script",
+          "pattern": "wp-includes",
+          "weight": 30
+        },
+        {
+          "type": "final-url",
+          "pattern": "wordpress.com",
+          "weight": 70
+        }
       ]
     },
     {
@@ -223,8 +403,17 @@
       "category": "infra",
       "threshold": 50,
       "rules": [
-        {"type": "header", "key": "cf-ray", "pattern": "", "weight": 60},
-        {"type": "dns", "pattern": "cloudflare", "weight": 40}
+        {
+          "type": "header",
+          "key": "cf-ray",
+          "pattern": "",
+          "weight": 60
+        },
+        {
+          "type": "dns",
+          "pattern": "cloudflare",
+          "weight": 40
+        }
       ]
     },
     {
@@ -232,11 +421,33 @@
       "category": "cms",
       "threshold": 60,
       "rules": [
-        {"type": "html", "pattern": "sites/default/files", "weight": 50},
-        {"type": "html", "pattern": "Drupal.settings", "weight": 50},
-        {"type": "meta", "key": "generator", "pattern": "Drupal", "weight": 60},
-        {"type": "cookie", "pattern": "Drupal.visitor", "weight": 40},
-        {"type": "header", "key": "x-generator", "pattern": "Drupal", "weight": 60}
+        {
+          "type": "html",
+          "pattern": "sites/default/files",
+          "weight": 50
+        },
+        {
+          "type": "html",
+          "pattern": "Drupal.settings",
+          "weight": 50
+        },
+        {
+          "type": "meta",
+          "key": "generator",
+          "pattern": "Drupal",
+          "weight": 60
+        },
+        {
+          "type": "cookie",
+          "pattern": "Drupal.visitor",
+          "weight": 40
+        },
+        {
+          "type": "header",
+          "key": "x-generator",
+          "pattern": "Drupal",
+          "weight": 60
+        }
       ]
     },
     {
@@ -244,9 +455,22 @@
       "category": "cms",
       "threshold": 60,
       "rules": [
-        {"type": "meta", "key": "generator", "pattern": "Joomla", "weight": 60},
-        {"type": "html", "pattern": "/media/jui/", "weight": 40},
-        {"type": "html", "pattern": "joomla", "weight": 30}
+        {
+          "type": "meta",
+          "key": "generator",
+          "pattern": "Joomla",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "/media/jui/",
+          "weight": 40
+        },
+        {
+          "type": "html",
+          "pattern": "joomla",
+          "weight": 30
+        }
       ]
     },
     {
@@ -254,10 +478,26 @@
       "category": "cms",
       "threshold": 60,
       "rules": [
-        {"type": "html", "pattern": "Mage.Cookies", "weight": 50},
-        {"type": "html", "pattern": "/skin/frontend/", "weight": 40},
-        {"type": "cookie", "pattern": "frontend", "weight": 30},
-        {"type": "script", "pattern": "mage/", "weight": 40}
+        {
+          "type": "html",
+          "pattern": "Mage.Cookies",
+          "weight": 50
+        },
+        {
+          "type": "html",
+          "pattern": "/skin/frontend/",
+          "weight": 40
+        },
+        {
+          "type": "cookie",
+          "pattern": "frontend",
+          "weight": 30
+        },
+        {
+          "type": "script",
+          "pattern": "mage/",
+          "weight": 40
+        }
       ]
     },
     {
@@ -265,9 +505,27 @@
       "category": "cms",
       "threshold": 60,
       "rules": [
-        {"type": "html", "pattern": "webflow", "weight": 40},
-        {"type": "script", "pattern": "webflow.js", "weight": 50},
-        {"type": "header", "key": "x-powered-by", "pattern": "Webflow", "weight": 60}
+        {
+          "type": "html",
+          "pattern": "webflow",
+          "weight": 40
+        },
+        {
+          "type": "script",
+          "pattern": "webflow.js",
+          "weight": 50
+        },
+        {
+          "type": "header",
+          "key": "x-powered-by",
+          "pattern": "Webflow",
+          "weight": 60
+        },
+        {
+          "type": "final-url",
+          "pattern": "webflow.io",
+          "weight": 70
+        }
       ]
     },
     {
@@ -275,9 +533,27 @@
       "category": "cms",
       "threshold": 60,
       "rules": [
-        {"type": "meta", "key": "generator", "pattern": "Ghost", "weight": 60},
-        {"type": "html", "pattern": "ghost.io", "weight": 40},
-        {"type": "script", "pattern": "ghost", "weight": 30}
+        {
+          "type": "meta",
+          "key": "generator",
+          "pattern": "Ghost",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "ghost.io",
+          "weight": 40
+        },
+        {
+          "type": "script",
+          "pattern": "ghost",
+          "weight": 30
+        },
+        {
+          "type": "final-url",
+          "pattern": "ghost.io",
+          "weight": 70
+        }
       ]
     },
     {
@@ -285,8 +561,16 @@
       "category": "frontend",
       "threshold": 50,
       "rules": [
-        {"type": "html", "pattern": "__svelte", "weight": 50},
-        {"type": "script", "pattern": "svelte", "weight": 40}
+        {
+          "type": "html",
+          "pattern": "__svelte",
+          "weight": 50
+        },
+        {
+          "type": "script",
+          "pattern": "svelte",
+          "weight": 40
+        }
       ]
     },
     {
@@ -294,8 +578,16 @@
       "category": "frontend",
       "threshold": 40,
       "rules": [
-        {"type": "html", "pattern": "tailwind", "weight": 30},
-        {"type": "link", "pattern": "tailwind", "weight": 40}
+        {
+          "type": "html",
+          "pattern": "tailwind",
+          "weight": 30
+        },
+        {
+          "type": "link",
+          "pattern": "tailwind",
+          "weight": 40
+        }
       ]
     },
     {
@@ -303,8 +595,16 @@
       "category": "frontend",
       "threshold": 50,
       "rules": [
-        {"type": "html", "pattern": "___gatsby", "weight": 60},
-        {"type": "html", "pattern": "gatsby-", "weight": 30}
+        {
+          "type": "html",
+          "pattern": "___gatsby",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "gatsby-",
+          "weight": 30
+        }
       ]
     },
     {
@@ -312,9 +612,23 @@
       "category": "infra",
       "threshold": 50,
       "rules": [
-        {"type": "header", "key": "server", "pattern": "AmazonS3", "weight": 50},
-        {"type": "header", "key": "x-amz-request-id", "pattern": "", "weight": 60},
-        {"type": "dns", "pattern": "amazonaws.com", "weight": 50}
+        {
+          "type": "header",
+          "key": "server",
+          "pattern": "AmazonS3",
+          "weight": 50
+        },
+        {
+          "type": "header",
+          "key": "x-amz-request-id",
+          "pattern": "",
+          "weight": 60
+        },
+        {
+          "type": "dns",
+          "pattern": "amazonaws.com",
+          "weight": 50
+        }
       ]
     },
     {
@@ -322,9 +636,28 @@
       "category": "infra",
       "threshold": 50,
       "rules": [
-        {"type": "header", "key": "x-vercel-id", "pattern": "", "weight": 60},
-        {"type": "dns", "pattern": "vercel.app", "weight": 50},
-        {"type": "header", "key": "server", "pattern": "Vercel", "weight": 50}
+        {
+          "type": "header",
+          "key": "x-vercel-id",
+          "pattern": "",
+          "weight": 60
+        },
+        {
+          "type": "dns",
+          "pattern": "vercel.app",
+          "weight": 50
+        },
+        {
+          "type": "header",
+          "key": "server",
+          "pattern": "Vercel",
+          "weight": 50
+        },
+        {
+          "type": "final-url",
+          "pattern": "vercel.app",
+          "weight": 70
+        }
       ]
     },
     {
@@ -332,9 +665,28 @@
       "category": "infra",
       "threshold": 50,
       "rules": [
-        {"type": "header", "key": "x-nf-request-id", "pattern": "", "weight": 60},
-        {"type": "dns", "pattern": "netlify.app", "weight": 50},
-        {"type": "header", "key": "server", "pattern": "Netlify", "weight": 50}
+        {
+          "type": "header",
+          "key": "x-nf-request-id",
+          "pattern": "",
+          "weight": 60
+        },
+        {
+          "type": "dns",
+          "pattern": "netlify.app",
+          "weight": 50
+        },
+        {
+          "type": "header",
+          "key": "server",
+          "pattern": "Netlify",
+          "weight": 50
+        },
+        {
+          "type": "final-url",
+          "pattern": "netlify.app",
+          "weight": 70
+        }
       ]
     },
     {
@@ -342,8 +694,18 @@
       "category": "infra",
       "threshold": 40,
       "rules": [
-        {"type": "header", "key": "server", "pattern": "IIS", "weight": 50},
-        {"type": "header", "key": "x-powered-by", "pattern": "ASP.NET", "weight": 40}
+        {
+          "type": "header",
+          "key": "server",
+          "pattern": "IIS",
+          "weight": 50
+        },
+        {
+          "type": "header",
+          "key": "x-powered-by",
+          "pattern": "ASP.NET",
+          "weight": 40
+        }
       ]
     },
     {
@@ -351,9 +713,22 @@
       "category": "backend",
       "threshold": 40,
       "rules": [
-        {"type": "header", "key": "x-powered-by", "pattern": "ASP.NET", "weight": 50},
-        {"type": "cookie", "pattern": "ASP.NET_SessionId", "weight": 60},
-        {"type": "cookie", "pattern": "__RequestVerificationToken", "weight": 40}
+        {
+          "type": "header",
+          "key": "x-powered-by",
+          "pattern": "ASP.NET",
+          "weight": 50
+        },
+        {
+          "type": "cookie",
+          "pattern": "ASP.NET_SessionId",
+          "weight": 60
+        },
+        {
+          "type": "cookie",
+          "pattern": "__RequestVerificationToken",
+          "weight": 40
+        }
       ]
     },
     {
@@ -361,9 +736,23 @@
       "category": "backend",
       "threshold": 40,
       "rules": [
-        {"type": "cookie", "pattern": "JSESSIONID", "weight": 60},
-        {"type": "header", "key": "x-powered-by", "pattern": "JSP", "weight": 50},
-        {"type": "header", "key": "x-powered-by", "pattern": "Servlet", "weight": 50}
+        {
+          "type": "cookie",
+          "pattern": "JSESSIONID",
+          "weight": 60
+        },
+        {
+          "type": "header",
+          "key": "x-powered-by",
+          "pattern": "JSP",
+          "weight": 50
+        },
+        {
+          "type": "header",
+          "key": "x-powered-by",
+          "pattern": "Servlet",
+          "weight": 50
+        }
       ]
     },
     {
@@ -371,9 +760,23 @@
       "category": "backend",
       "threshold": 40,
       "rules": [
-        {"type": "header", "key": "x-powered-by", "pattern": "Phusion Passenger", "weight": 50},
-        {"type": "cookie", "pattern": "_session_id", "weight": 30},
-        {"type": "header", "key": "x-runtime", "pattern": "", "weight": 50}
+        {
+          "type": "header",
+          "key": "x-powered-by",
+          "pattern": "Phusion Passenger",
+          "weight": 50
+        },
+        {
+          "type": "cookie",
+          "pattern": "_session_id",
+          "weight": 30
+        },
+        {
+          "type": "header",
+          "key": "x-runtime",
+          "pattern": "",
+          "weight": 50
+        }
       ]
     },
     {
@@ -381,8 +784,16 @@
       "category": "analytics",
       "threshold": 40,
       "rules": [
-        {"type": "script", "pattern": "intercom", "weight": 50},
-        {"type": "html", "pattern": "intercomSettings", "weight": 40}
+        {
+          "type": "script",
+          "pattern": "intercom",
+          "weight": 50
+        },
+        {
+          "type": "html",
+          "pattern": "intercomSettings",
+          "weight": 40
+        }
       ]
     },
     {
@@ -390,8 +801,16 @@
       "category": "analytics",
       "threshold": 40,
       "rules": [
-        {"type": "script", "pattern": "zendesk.com", "weight": 50},
-        {"type": "script", "pattern": "zdassets.com", "weight": 50}
+        {
+          "type": "script",
+          "pattern": "zendesk.com",
+          "weight": 50
+        },
+        {
+          "type": "script",
+          "pattern": "zdassets.com",
+          "weight": 50
+        }
       ]
     },
     {
@@ -399,9 +818,21 @@
       "category": "analytics",
       "threshold": 40,
       "rules": [
-        {"type": "script", "pattern": "hs-scripts.com", "weight": 50},
-        {"type": "script", "pattern": "hubspot.com", "weight": 40},
-        {"type": "cookie", "pattern": "__hstc", "weight": 50}
+        {
+          "type": "script",
+          "pattern": "hs-scripts.com",
+          "weight": 50
+        },
+        {
+          "type": "script",
+          "pattern": "hubspot.com",
+          "weight": 40
+        },
+        {
+          "type": "cookie",
+          "pattern": "__hstc",
+          "weight": 50
+        }
       ]
     },
     {
@@ -409,8 +840,16 @@
       "category": "analytics",
       "threshold": 40,
       "rules": [
-        {"type": "script", "pattern": "mixpanel.com", "weight": 50},
-        {"type": "html", "pattern": "mixpanel.init", "weight": 40}
+        {
+          "type": "script",
+          "pattern": "mixpanel.com",
+          "weight": 50
+        },
+        {
+          "type": "html",
+          "pattern": "mixpanel.init",
+          "weight": 40
+        }
       ]
     },
     {
@@ -418,8 +857,16 @@
       "category": "analytics",
       "threshold": 40,
       "rules": [
-        {"type": "script", "pattern": "cdn.segment.com", "weight": 60},
-        {"type": "html", "pattern": "analytics.load", "weight": 30}
+        {
+          "type": "script",
+          "pattern": "cdn.segment.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "analytics.load",
+          "weight": 30
+        }
       ]
     },
     {
@@ -427,8 +874,16 @@
       "category": "frontend",
       "threshold": 40,
       "rules": [
-        {"type": "script", "pattern": "maps.googleapis.com", "weight": 60},
-        {"type": "html", "pattern": "google.maps", "weight": 40}
+        {
+          "type": "script",
+          "pattern": "maps.googleapis.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "google.maps",
+          "weight": 40
+        }
       ]
     },
     {
@@ -436,8 +891,16 @@
       "category": "payment",
       "threshold": 50,
       "rules": [
-        {"type": "script", "pattern": "js.stripe.com", "weight": 60},
-        {"type": "html", "pattern": "Stripe(", "weight": 40}
+        {
+          "type": "script",
+          "pattern": "js.stripe.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "Stripe(",
+          "weight": 40
+        }
       ]
     },
     {
@@ -445,8 +908,16 @@
       "category": "payment",
       "threshold": 50,
       "rules": [
-        {"type": "script", "pattern": "paypal.com/sdk", "weight": 60},
-        {"type": "html", "pattern": "paypal.Buttons", "weight": 40}
+        {
+          "type": "script",
+          "pattern": "paypal.com/sdk",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "paypal.Buttons",
+          "weight": 40
+        }
       ]
     },
     {
@@ -454,8 +925,16 @@
       "category": "email",
       "threshold": 50,
       "rules": [
-        {"type": "dns", "pattern": "google.com", "weight": 50},
-        {"type": "dns", "pattern": "aspmx.l.google.com", "weight": 60}
+        {
+          "type": "dns",
+          "pattern": "google.com",
+          "weight": 50
+        },
+        {
+          "type": "dns",
+          "pattern": "aspmx.l.google.com",
+          "weight": 60
+        }
       ]
     },
     {
@@ -463,10 +942,6627 @@
       "category": "email",
       "threshold": 50,
       "rules": [
-        {"type": "dns", "pattern": "outlook.com", "weight": 60},
-        {"type": "dns", "pattern": "protection.outlook.com", "weight": 60}
+        {
+          "type": "dns",
+          "pattern": "outlook.com",
+          "weight": 60
+        },
+        {
+          "type": "dns",
+          "pattern": "protection.outlook.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Remix",
+      "category": "frontend",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "__remixContext",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "__remixManifest",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Astro",
+      "category": "frontend",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "astro-",
+          "weight": 40
+        },
+        {
+          "type": "header",
+          "key": "x-powered-by",
+          "pattern": "Astro",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Ember.js",
+      "category": "frontend",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "ember-application",
+          "weight": 50
+        },
+        {
+          "type": "script",
+          "pattern": "ember.min.js",
+          "weight": 50
+        },
+        {
+          "type": "html",
+          "pattern": "data-ember-action",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "Backbone.js",
+      "category": "frontend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "backbone.js",
+          "weight": 50
+        },
+        {
+          "type": "script",
+          "pattern": "backbone.min.js",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "Alpine.js",
+      "category": "frontend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "alpinejs",
+          "weight": 50
+        },
+        {
+          "type": "html",
+          "pattern": "x-data=",
+          "weight": 40
+        },
+        {
+          "type": "html",
+          "pattern": "x-bind=",
+          "weight": 30
+        }
+      ]
+    },
+    {
+      "name": "HTMX",
+      "category": "frontend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "htmx.org",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "hx-get=",
+          "weight": 50
+        },
+        {
+          "type": "html",
+          "pattern": "hx-post=",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "Three.js",
+      "category": "frontend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "three.min.js",
+          "weight": 50
+        },
+        {
+          "type": "script",
+          "pattern": "three.js",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "D3.js",
+      "category": "frontend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "d3.min.js",
+          "weight": 50
+        },
+        {
+          "type": "script",
+          "pattern": "d3.js",
+          "weight": 50
+        },
+        {
+          "type": "script",
+          "pattern": "d3js.org",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "Chart.js",
+      "category": "frontend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "chart.min.js",
+          "weight": 50
+        },
+        {
+          "type": "script",
+          "pattern": "chartjs",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "Lodash",
+      "category": "frontend",
+      "threshold": 30,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "lodash.min.js",
+          "weight": 50
+        },
+        {
+          "type": "script",
+          "pattern": "lodash.js",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "Moment.js",
+      "category": "frontend",
+      "threshold": 30,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "moment.min.js",
+          "weight": 50
+        },
+        {
+          "type": "script",
+          "pattern": "moment.js",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "Axios",
+      "category": "frontend",
+      "threshold": 30,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "axios.min.js",
+          "weight": 50
+        },
+        {
+          "type": "script",
+          "pattern": "axios.js",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "Slick Carousel",
+      "category": "frontend",
+      "threshold": 30,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "slick.min.js",
+          "weight": 50
+        },
+        {
+          "type": "link",
+          "pattern": "slick.css",
+          "weight": 40
+        }
+      ]
+    },
+    {
+      "name": "Swiper",
+      "category": "frontend",
+      "threshold": 30,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "swiper.min.js",
+          "weight": 50
+        },
+        {
+          "type": "link",
+          "pattern": "swiper.css",
+          "weight": 40
+        },
+        {
+          "type": "html",
+          "pattern": "swiper-container",
+          "weight": 30
+        }
+      ]
+    },
+    {
+      "name": "GSAP",
+      "category": "frontend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "gsap.min.js",
+          "weight": 50
+        },
+        {
+          "type": "script",
+          "pattern": "greensock",
+          "weight": 50
+        },
+        {
+          "type": "html",
+          "pattern": "gsap.to(",
+          "weight": 40
+        }
+      ]
+    },
+    {
+      "name": "Materialize CSS",
+      "category": "frontend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "materialize.min.js",
+          "weight": 50
+        },
+        {
+          "type": "link",
+          "pattern": "materialize.min.css",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "Bulma",
+      "category": "frontend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "link",
+          "pattern": "bulma.min.css",
+          "weight": 50
+        },
+        {
+          "type": "html",
+          "pattern": "bulma",
+          "weight": 20
+        }
+      ]
+    },
+    {
+      "name": "Foundation",
+      "category": "frontend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "foundation.min.js",
+          "weight": 50
+        },
+        {
+          "type": "link",
+          "pattern": "foundation.min.css",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "Semantic UI",
+      "category": "frontend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "link",
+          "pattern": "semantic.min.css",
+          "weight": 50
+        },
+        {
+          "type": "script",
+          "pattern": "semantic.min.js",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "MUI",
+      "category": "frontend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "MuiButton",
+          "weight": 50
+        },
+        {
+          "type": "html",
+          "pattern": "MuiTypography",
+          "weight": 50
+        },
+        {
+          "type": "script",
+          "pattern": "@mui",
+          "weight": 40
+        }
+      ]
+    },
+    {
+      "name": "Ant Design",
+      "category": "frontend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "ant-btn",
+          "weight": 50
+        },
+        {
+          "type": "html",
+          "pattern": "ant-layout",
+          "weight": 50
+        },
+        {
+          "type": "link",
+          "pattern": "antd.min.css",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "WooCommerce",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "woocommerce",
+          "weight": 50
+        },
+        {
+          "type": "cookie",
+          "pattern": "woocommerce_",
+          "weight": 50
+        },
+        {
+          "type": "script",
+          "pattern": "woocommerce",
+          "weight": 40
+        }
+      ]
+    },
+    {
+      "name": "PrestaShop",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "prestashop",
+          "weight": 50
+        },
+        {
+          "type": "meta",
+          "key": "generator",
+          "pattern": "PrestaShop",
+          "weight": 60
+        },
+        {
+          "type": "cookie",
+          "pattern": "PrestaShop-",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "OpenCart",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "route=common/home",
+          "weight": 50
+        },
+        {
+          "type": "script",
+          "pattern": "catalog/view/javascript",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "TYPO3",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {
+          "type": "meta",
+          "key": "generator",
+          "pattern": "TYPO3",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "typo3",
+          "weight": 40
+        },
+        {
+          "type": "script",
+          "pattern": "typo3",
+          "weight": 40
+        }
+      ]
+    },
+    {
+      "name": "Contentful",
+      "category": "cms",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "contentful.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "contentful",
+          "weight": 30
+        }
+      ]
+    },
+    {
+      "name": "Sanity",
+      "category": "cms",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "sanity.io",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "__sanity",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "Strapi",
+      "category": "cms",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "header",
+          "key": "x-powered-by",
+          "pattern": "Strapi",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "strapi",
+          "weight": 30
+        }
+      ]
+    },
+    {
+      "name": "Django",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "header",
+          "key": "x-frame-options",
+          "pattern": "SAMEORIGIN",
+          "weight": 20
+        },
+        {
+          "type": "cookie",
+          "pattern": "csrftoken",
+          "weight": 50
+        },
+        {
+          "type": "cookie",
+          "pattern": "sessionid",
+          "weight": 30
+        },
+        {
+          "type": "html",
+          "pattern": "csrfmiddlewaretoken",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "Laravel",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "cookie",
+          "pattern": "laravel_session",
+          "weight": 60
+        },
+        {
+          "type": "cookie",
+          "pattern": "XSRF-TOKEN",
+          "weight": 40
+        },
+        {
+          "type": "header",
+          "key": "x-powered-by",
+          "pattern": "PHP",
+          "weight": 20
+        }
+      ]
+    },
+    {
+      "name": "Symfony",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "cookie",
+          "pattern": "SYMFONY_",
+          "weight": 60
+        },
+        {
+          "type": "header",
+          "key": "x-debug-token",
+          "pattern": "",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Express.js",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "header",
+          "key": "x-powered-by",
+          "pattern": "Express",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "FastAPI",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "header",
+          "key": "server",
+          "pattern": "uvicorn",
+          "weight": 50
+        },
+        {
+          "type": "html",
+          "pattern": "fastapi",
+          "weight": 30
+        }
+      ]
+    },
+    {
+      "name": "Node.js",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "header",
+          "key": "x-powered-by",
+          "pattern": "Node.js",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Caddy",
+      "category": "infra",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "header",
+          "key": "server",
+          "pattern": "Caddy",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "LiteSpeed",
+      "category": "infra",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "header",
+          "key": "server",
+          "pattern": "LiteSpeed",
+          "weight": 60
+        },
+        {
+          "type": "header",
+          "key": "x-powered-by",
+          "pattern": "LiteSpeed",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "OpenResty",
+      "category": "infra",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "header",
+          "key": "server",
+          "pattern": "openresty",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Google Cloud",
+      "category": "infra",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "header",
+          "key": "server",
+          "pattern": "Google Frontend",
+          "weight": 60
+        },
+        {
+          "type": "dns",
+          "pattern": "googleusercontent.com",
+          "weight": 50
+        },
+        {
+          "type": "header",
+          "key": "via",
+          "pattern": "google",
+          "weight": 40
+        }
+      ]
+    },
+    {
+      "name": "Microsoft Azure",
+      "category": "infra",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "header",
+          "key": "x-ms-request-id",
+          "pattern": "",
+          "weight": 60
+        },
+        {
+          "type": "dns",
+          "pattern": "azurewebsites.net",
+          "weight": 60
+        },
+        {
+          "type": "dns",
+          "pattern": "azure.com",
+          "weight": 40
+        },
+        {
+          "type": "final-url",
+          "pattern": "azurewebsites.net",
+          "weight": 70
+        }
+      ]
+    },
+    {
+      "name": "Heroku",
+      "category": "infra",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "header",
+          "key": "x-request-id",
+          "pattern": "",
+          "weight": 20
+        },
+        {
+          "type": "dns",
+          "pattern": "herokuapp.com",
+          "weight": 60
+        },
+        {
+          "type": "header",
+          "key": "via",
+          "pattern": "1.1 vegur",
+          "weight": 60
+        },
+        {
+          "type": "final-url",
+          "pattern": "herokuapp.com",
+          "weight": 70
+        }
+      ]
+    },
+    {
+      "name": "Fastly",
+      "category": "infra",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "header",
+          "key": "x-served-by",
+          "pattern": "cache",
+          "weight": 40
+        },
+        {
+          "type": "header",
+          "key": "fastly-restarts",
+          "pattern": "",
+          "weight": 60
+        },
+        {
+          "type": "header",
+          "key": "x-fastly-request-id",
+          "pattern": "",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Sucuri",
+      "category": "infra",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "header",
+          "key": "x-sucuri-id",
+          "pattern": "",
+          "weight": 60
+        },
+        {
+          "type": "header",
+          "key": "x-sucuri-cache",
+          "pattern": "",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Imperva",
+      "category": "infra",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "cookie",
+          "pattern": "incap_ses",
+          "weight": 60
+        },
+        {
+          "type": "cookie",
+          "pattern": "visid_incap",
+          "weight": 60
+        },
+        {
+          "type": "header",
+          "key": "x-iinfo",
+          "pattern": "",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "reCAPTCHA",
+      "category": "security",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "google.com/recaptcha",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "g-recaptcha",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "hCaptcha",
+      "category": "security",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "hcaptcha.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "h-captcha",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "Cloudflare Turnstile",
+      "category": "security",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "challenges.cloudflare.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "cf-turnstile",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Amplitude",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "amplitude.com",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "cdn.amplitude.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Heap",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "heapanalytics.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "heap.load(",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "FullStory",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "fullstory.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "FS.identify",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "Mouseflow",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "mouseflow.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "mouseflow",
+          "weight": 40
+        }
+      ]
+    },
+    {
+      "name": "Crazy Egg",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "crazyegg.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Lucky Orange",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "luckyorange.com",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "luckyorange.net",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Optimizely",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "optimizely.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "optimizely",
+          "weight": 30
+        }
+      ]
+    },
+    {
+      "name": "VWO",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "visualwebsiteoptimizer.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "vwo_",
+          "weight": 40
+        }
+      ]
+    },
+    {
+      "name": "Drift",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "drift.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "driftt.com",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "Crisp",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "client.crisp.chat",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "CRISP_WEBSITE_ID",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Tawk.to",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "tawk.to",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "Tawk_API",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "LiveChat",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "livechatinc.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "LiveChatWidget",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "Braze",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "braze.com",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "appboy",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "Klaviyo",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "klaviyo.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "klaviyo",
+          "weight": 30
+        }
+      ]
+    },
+    {
+      "name": "Mailchimp",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "chimpstatic.com",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "mailchimp.com",
+          "weight": 50
+        },
+        {
+          "type": "html",
+          "pattern": "mc-embedded-subscribe",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "Twilio",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "twilio.com",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "media.twiliocdn.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Adyen",
+      "category": "payment",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "adyen.com",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "checkoutshopper",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "Braintree",
+      "category": "payment",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "braintreegateway.com",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "paypalobjects.com/web/res",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "Square",
+      "category": "payment",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "squareup.com",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "web.squarecdn.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Klarna",
+      "category": "payment",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "klarna.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "klarna-placement",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "Afterpay",
+      "category": "payment",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "afterpay.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "afterpay",
+          "weight": 30
+        }
+      ]
+    },
+    {
+      "name": "SendGrid",
+      "category": "email",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "dns",
+          "pattern": "sendgrid.net",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Mailgun",
+      "category": "email",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "dns",
+          "pattern": "mailgun.org",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Amazon SES",
+      "category": "email",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "dns",
+          "pattern": "amazonses.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Postmark",
+      "category": "email",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "dns",
+          "pattern": "spf.mtasv.net",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Proofpoint",
+      "category": "email",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "dns",
+          "pattern": "pphosted.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Mimecast",
+      "category": "email",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "dns",
+          "pattern": "mimecast.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Zoho Mail",
+      "category": "email",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "dns",
+          "pattern": "zoho.com",
+          "weight": 60
+        },
+        {
+          "type": "dns",
+          "pattern": "mx.zoho.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "YouTube",
+      "category": "media",
+      "threshold": 30,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "youtube.com/iframe_api",
+          "weight": 50
+        },
+        {
+          "type": "html",
+          "pattern": "youtube.com/embed",
+          "weight": 40
+        }
+      ]
+    },
+    {
+      "name": "Vimeo",
+      "category": "media",
+      "threshold": 30,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "player.vimeo.com",
+          "weight": 50
+        },
+        {
+          "type": "html",
+          "pattern": "vimeo.com/video",
+          "weight": 40
+        }
+      ]
+    },
+    {
+      "name": "Cloudinary",
+      "category": "media",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "cloudinary.com",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "cloudinary.com",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "imgix",
+      "category": "media",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "imgix.net",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Twitch",
+      "category": "media",
+      "threshold": 30,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "player.twitch.tv",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "twitch.tv/embed",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "LinkedIn Insight",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "snap.licdn.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "_linkedin_partner_id",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Twitter/X Pixel",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "static.ads-twitter.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "twq(",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "TikTok Pixel",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "analytics.tiktok.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "ttq.load(",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Pinterest Tag",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "ct.pinterest.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "pintrk(",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Bing Ads",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "bat.bing.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "uetq",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "Cookiebot",
+      "category": "security",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "cookiebot.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "CookieConsent",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "OneTrust",
+      "category": "security",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "onetrust.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "OneTrust",
+          "weight": 50
+        },
+        {
+          "type": "cookie",
+          "pattern": "OptanonConsent",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "TrustArc",
+      "category": "security",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "trustarc.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "truste.com",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "Auth0",
+      "category": "security",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "auth0.com",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "cdn.auth0.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Okta",
+      "category": "security",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "okta.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "okta-sign-in",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Firebase",
+      "category": "backend",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "firebase.googleapis.com",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "firebaseapp.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "firebaseConfig",
+          "weight": 50
+        },
+        {
+          "type": "final-url",
+          "pattern": "web.app",
+          "weight": 70
+        }
+      ]
+    },
+    {
+      "name": "Supabase",
+      "category": "backend",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "supabase.co",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "supabase",
+          "weight": 30
+        }
+      ]
+    },
+    {
+      "name": "Apollo GraphQL",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "apollo",
+          "weight": 30
+        },
+        {
+          "type": "html",
+          "pattern": "__APOLLO_STATE__",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Sentry",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "sentry.io",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "browser.sentry-cdn.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Datadog",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "datadoghq.com",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "rum.browser-intake-datadoghq.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "New Relic",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "newrelic.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "NREUM",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "LogRocket",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "logrocket.com",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "cdn.lr-intake.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Elementor",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "elementor-widget",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "elementor/assets",
+          "weight": 50
+        },
+        {
+          "type": "html",
+          "pattern": "elementor-section",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "Divi",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "et_pb_section",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "divi",
+          "weight": 40
+        },
+        {
+          "type": "html",
+          "pattern": "et-pb-",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "Beaver Builder",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "fl-builder",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "bb-plugin",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "Avada",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "fusion-builder",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "avada",
+          "weight": 40
+        },
+        {
+          "type": "html",
+          "pattern": "fusion-row",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "BigCommerce",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "bigcommerce.com",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "bigcommerce.com",
+          "weight": 50
+        },
+        {
+          "type": "cookie",
+          "pattern": "SHOP_SESSION_TOKEN",
+          "weight": 60
+        },
+        {
+          "type": "final-url",
+          "pattern": "mybigcommerce.com",
+          "weight": 70
+        }
+      ]
+    },
+    {
+      "name": "Salesforce Commerce Cloud",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "demandware",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "demandware.net",
+          "weight": 60
+        },
+        {
+          "type": "cookie",
+          "pattern": "dwsid",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "HubSpot CMS",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "hs-sites.com",
+          "weight": 60
+        },
+        {
+          "type": "meta",
+          "key": "generator",
+          "pattern": "HubSpot",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "hubspot.net",
+          "weight": 50
+        },
+        {
+          "type": "final-url",
+          "pattern": "hs-sites.com",
+          "weight": 70
+        }
+      ]
+    },
+    {
+      "name": "Umbraco",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {
+          "type": "meta",
+          "key": "generator",
+          "pattern": "Umbraco",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "umbraco",
+          "weight": 40
+        },
+        {
+          "type": "cookie",
+          "pattern": "UMB_UCONTEXT",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Kentico",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {
+          "type": "meta",
+          "key": "generator",
+          "pattern": "Kentico",
+          "weight": 60
+        },
+        {
+          "type": "cookie",
+          "pattern": "CMSPreferredCulture",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "kentico",
+          "weight": 40
+        }
+      ]
+    },
+    {
+      "name": "Sitecore",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "sitecore",
+          "weight": 40
+        },
+        {
+          "type": "cookie",
+          "pattern": "SC_ANALYTICS",
+          "weight": 60
+        },
+        {
+          "type": "header",
+          "key": "x-sitecore-requestid",
+          "pattern": "",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Adobe Experience Manager",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "/etc/clientlibs/",
+          "weight": 50
+        },
+        {
+          "type": "html",
+          "pattern": "jcr:content",
+          "weight": 50
+        },
+        {
+          "type": "html",
+          "pattern": "wcm/foundation",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Craft CMS",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {
+          "type": "meta",
+          "key": "generator",
+          "pattern": "Craft CMS",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "craft-cms",
+          "weight": 40
+        },
+        {
+          "type": "cookie",
+          "pattern": "CraftSessionId",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Prismic",
+      "category": "cms",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "prismic.io",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "prismic",
+          "weight": 30
+        }
+      ]
+    },
+    {
+      "name": "Storyblok",
+      "category": "cms",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "storyblok.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "storyblok",
+          "weight": 30
+        }
+      ]
+    },
+    {
+      "name": "SvelteKit",
+      "category": "frontend",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "__sveltekit",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "sveltekit",
+          "weight": 40
+        }
+      ]
+    },
+    {
+      "name": "Solid.js",
+      "category": "frontend",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "solid-js",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "data-hk=",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "Preact",
+      "category": "frontend",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "preact.min.js",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "preact",
+          "weight": 40
+        }
+      ]
+    },
+    {
+      "name": "Lit",
+      "category": "frontend",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "lit.dev",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "lit-element",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Qwik",
+      "category": "frontend",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "q:container",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "qwik",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "Stencil.js",
+      "category": "frontend",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "s-id=",
+          "weight": 50
+        },
+        {
+          "type": "script",
+          "pattern": "stencil",
+          "weight": 40
+        }
+      ]
+    },
+    {
+      "name": "Web Components",
+      "category": "frontend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "customElements.define",
+          "weight": 50
+        },
+        {
+          "type": "html",
+          "pattern": "attachShadow",
+          "weight": 40
+        }
+      ]
+    },
+    {
+      "name": "Highcharts",
+      "category": "frontend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "highcharts.com",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "highcharts.js",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Plotly",
+      "category": "frontend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "plotly.min.js",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "cdn.plot.ly",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Leaflet",
+      "category": "frontend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "leaflet.js",
+          "weight": 60
+        },
+        {
+          "type": "link",
+          "pattern": "leaflet.css",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "Mapbox",
+      "category": "frontend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "mapbox-gl.js",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "api.mapbox.com",
+          "weight": 60
+        },
+        {
+          "type": "link",
+          "pattern": "mapbox-gl.css",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "TomTom Maps",
+      "category": "frontend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "api.tomtom.com",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "maps-sdk",
+          "weight": 40
+        }
+      ]
+    },
+    {
+      "name": "Select2",
+      "category": "frontend",
+      "threshold": 30,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "select2.min.js",
+          "weight": 50
+        },
+        {
+          "type": "link",
+          "pattern": "select2.min.css",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "DataTables",
+      "category": "frontend",
+      "threshold": 30,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "datatables.min.js",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "datatables.net",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Popper.js",
+      "category": "frontend",
+      "threshold": 30,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "popper.min.js",
+          "weight": 50
+        },
+        {
+          "type": "script",
+          "pattern": "popper.js",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "Socket.io",
+      "category": "backend",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "socket.io.js",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "socket.io.min.js",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "GraphQL",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "__typename",
+          "weight": 40
+        },
+        {
+          "type": "script",
+          "pattern": "graphql",
+          "weight": 40
+        },
+        {
+          "type": "html",
+          "pattern": "graphql",
+          "weight": 30
+        }
+      ]
+    },
+    {
+      "name": "Spring Boot",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "header",
+          "key": "x-application-context",
+          "pattern": "",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "Whitelabel Error Page",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Flask",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "header",
+          "key": "server",
+          "pattern": "Werkzeug",
+          "weight": 60
+        },
+        {
+          "type": "cookie",
+          "pattern": "session",
+          "weight": 20
+        }
+      ]
+    },
+    {
+      "name": "CodeIgniter",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "cookie",
+          "pattern": "ci_session",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "codeigniter",
+          "weight": 40
+        }
+      ]
+    },
+    {
+      "name": "CakePHP",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "cookie",
+          "pattern": "CAKEPHP",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "cakephp",
+          "weight": 40
+        }
+      ]
+    },
+    {
+      "name": "Yii",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "cookie",
+          "pattern": "YII_CSRF_TOKEN",
+          "weight": 60
+        },
+        {
+          "type": "header",
+          "key": "x-powered-by",
+          "pattern": "yii",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Golang",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "header",
+          "key": "server",
+          "pattern": "Go-http-client",
+          "weight": 60
+        },
+        {
+          "type": "header",
+          "key": "x-powered-by",
+          "pattern": "go",
+          "weight": 40
+        }
+      ]
+    },
+    {
+      "name": "Nginx Unit",
+      "category": "infra",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "header",
+          "key": "server",
+          "pattern": "Unit",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Varnish",
+      "category": "infra",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "header",
+          "key": "x-varnish",
+          "pattern": "",
+          "weight": 60
+        },
+        {
+          "type": "header",
+          "key": "via",
+          "pattern": "varnish",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Squid",
+      "category": "infra",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "header",
+          "key": "via",
+          "pattern": "squid",
+          "weight": 60
+        },
+        {
+          "type": "header",
+          "key": "x-squid-error",
+          "pattern": "",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "HAProxy",
+      "category": "infra",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "header",
+          "key": "server",
+          "pattern": "haproxy",
+          "weight": 60
+        },
+        {
+          "type": "cookie",
+          "pattern": "SERVERID",
+          "weight": 40
+        }
+      ]
+    },
+    {
+      "name": "Traefik",
+      "category": "infra",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "header",
+          "key": "x-powered-by",
+          "pattern": "Traefik",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Render",
+      "category": "infra",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "dns",
+          "pattern": "onrender.com",
+          "weight": 60
+        },
+        {
+          "type": "header",
+          "key": "x-render-origin-server",
+          "pattern": "",
+          "weight": 60
+        },
+        {
+          "type": "final-url",
+          "pattern": "onrender.com",
+          "weight": 70
+        }
+      ]
+    },
+    {
+      "name": "Fly.io",
+      "category": "infra",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "dns",
+          "pattern": "fly.dev",
+          "weight": 60
+        },
+        {
+          "type": "header",
+          "key": "fly-request-id",
+          "pattern": "",
+          "weight": 60
+        },
+        {
+          "type": "final-url",
+          "pattern": "fly.dev",
+          "weight": 70
+        }
+      ]
+    },
+    {
+      "name": "DigitalOcean",
+      "category": "infra",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "dns",
+          "pattern": "digitaloceanspaces.com",
+          "weight": 60
+        },
+        {
+          "type": "dns",
+          "pattern": "ondigitalocean.app",
+          "weight": 60
+        },
+        {
+          "type": "final-url",
+          "pattern": "ondigitalocean.app",
+          "weight": 70
+        }
+      ]
+    },
+    {
+      "name": "Linode/Akamai Cloud",
+      "category": "infra",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "dns",
+          "pattern": "linode.com",
+          "weight": 60
+        },
+        {
+          "type": "dns",
+          "pattern": "linodeobjects.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "jsDelivr",
+      "category": "infra",
+      "threshold": 30,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "cdn.jsdelivr.net",
+          "weight": 60
+        },
+        {
+          "type": "link",
+          "pattern": "cdn.jsdelivr.net",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "cdnjs",
+      "category": "infra",
+      "threshold": 30,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "cdnjs.cloudflare.com",
+          "weight": 60
+        },
+        {
+          "type": "link",
+          "pattern": "cdnjs.cloudflare.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "unpkg",
+      "category": "infra",
+      "threshold": 30,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "unpkg.com",
+          "weight": 60
+        },
+        {
+          "type": "link",
+          "pattern": "unpkg.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Snowplow",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "snowplow",
+          "weight": 50
+        },
+        {
+          "type": "html",
+          "pattern": "snowplow",
+          "weight": 30
+        }
+      ]
+    },
+    {
+      "name": "Pendo",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "cdn.pendo.io",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "pendo.initialize",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Appcues",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "appcues.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "Appcues.identify",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Userflow",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "userflow.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "userflow.init",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Posthog",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "posthog.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "posthog.init",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Plausible",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "plausible.io",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Fathom",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "cdn.usefathom.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Matomo",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "matomo.js",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "matomo.php",
+          "weight": 50
+        },
+        {
+          "type": "script",
+          "pattern": "piwik.js",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "Salesforce",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "salesforce.com",
+          "weight": 50
+        },
+        {
+          "type": "script",
+          "pattern": "pardot.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "pardot",
+          "weight": 40
+        }
+      ]
+    },
+    {
+      "name": "Marketo",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "marketo.com",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "munchkin.marketo.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "ActiveCampaign",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "trackcmp.net",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "activehosted.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Freshdesk",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "freshdesk.com",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "wchat.freshchat.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Freshchat",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "freshchat.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "fcWidget",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Olark",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "olark.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "olark.identify",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Zoho SalesIQ",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "salesiq.zoho.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "zsiqwidget",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Paddle",
+      "category": "payment",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "paddle.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "Paddle.Setup",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Recurly",
+      "category": "payment",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "recurly.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "recurly.configure",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Chargebee",
+      "category": "payment",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "chargebee.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "Chargebee.init",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Mollie",
+      "category": "payment",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "mollie.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "mollie.createToken",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "2Checkout",
+      "category": "payment",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "2checkout.com",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "2co.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "SparkPost",
+      "category": "email",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "dns",
+          "pattern": "sparkpostmail.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Brevo",
+      "category": "email",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "dns",
+          "pattern": "sendinblue.com",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "sendinblue.com",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "Constant Contact",
+      "category": "email",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "constantcontact.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "constantcontact",
+          "weight": 40
+        }
+      ]
+    },
+    {
+      "name": "Campaign Monitor",
+      "category": "email",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "campaignmonitor.com",
+          "weight": 60
+        },
+        {
+          "type": "dns",
+          "pattern": "cmail20.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Bunny CDN",
+      "category": "infra",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "b-cdn.net",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "b-cdn.net",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "KeyCDN",
+      "category": "infra",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "header",
+          "key": "x-edge-location",
+          "pattern": "",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "kxcdn.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Stackpath",
+      "category": "infra",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "header",
+          "key": "x-hw",
+          "pattern": "",
+          "weight": 60
+        },
+        {
+          "type": "dns",
+          "pattern": "stackpathcdn.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Wordfence",
+      "category": "security",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "wordfence",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "wordfence",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Qualys SSL",
+      "category": "security",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "header",
+          "key": "x-qualys-scan",
+          "pattern": "",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Iubenda",
+      "category": "security",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "iubenda.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "iubenda",
+          "weight": 40
+        }
+      ]
+    },
+    {
+      "name": "Termly",
+      "category": "security",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "termly.io",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "termly",
+          "weight": 40
+        }
+      ]
+    },
+    {
+      "name": "Osano",
+      "category": "security",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "osano.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "osano",
+          "weight": 40
+        }
+      ]
+    },
+    {
+      "name": "Cloudflare Bot Management",
+      "category": "security",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "cookie",
+          "pattern": "__cf_bm",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "cf-chl-bypass",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "PerimeterX",
+      "category": "security",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "perimeterx.net",
+          "weight": 60
+        },
+        {
+          "type": "cookie",
+          "pattern": "_px",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "DataStax Astra",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "astra.datastax.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "PlanetScale",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "planetscale.com",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "Neon",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "neon.tech",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "Algolia",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "algolia.net",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "algoliacdn.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "algolia",
+          "weight": 30
+        }
+      ]
+    },
+    {
+      "name": "Elasticsearch",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "elasticsearch",
+          "weight": 40
+        },
+        {
+          "type": "header",
+          "key": "x-elastic-product",
+          "pattern": "",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Redis",
+      "category": "backend",
+      "threshold": 30,
+      "rules": [
+        {
+          "type": "header",
+          "key": "x-cache",
+          "pattern": "redis",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Cloudflare Workers",
+      "category": "backend",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "header",
+          "key": "cf-workers-preview-token",
+          "pattern": "",
+          "weight": 60
+        },
+        {
+          "type": "header",
+          "key": "server",
+          "pattern": "cloudflare",
+          "weight": 30
+        }
+      ]
+    },
+    {
+      "name": "AWS Lambda",
+      "category": "backend",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "header",
+          "key": "x-amzn-requestid",
+          "pattern": "",
+          "weight": 60
+        },
+        {
+          "type": "header",
+          "key": "x-amzn-trace-id",
+          "pattern": "",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Spotify Embed",
+      "category": "media",
+      "threshold": 30,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "open.spotify.com/embed",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "embed.spotify.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "SoundCloud",
+      "category": "media",
+      "threshold": 30,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "soundcloud.com/player",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "w.soundcloud.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Wistia",
+      "category": "media",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "wistia.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "wistia_async",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "JW Player",
+      "category": "media",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "jwplatform.com",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "jwpcdn.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Mux",
+      "category": "media",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "mux.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "mux-player",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Typekit / Adobe Fonts",
+      "category": "frontend",
+      "threshold": 30,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "use.typekit.net",
+          "weight": 60
+        },
+        {
+          "type": "link",
+          "pattern": "use.typekit.net",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Google reCAPTCHA v3",
+      "category": "security",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "recaptcha/api.js",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "grecaptcha.execute",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Snap Pixel",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "sc-static.net/scevent.min.js",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "snaptr(",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Quora Pixel",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "quora.com/qevents.js",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "qp('init'",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Reddit Pixel",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "rdt.li",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "rdt('init'",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Taboola",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "cdn.taboola.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "_taboola",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Outbrain",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "outbrain.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "OBR.extern",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Yandex Metrica",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "mc.yandex.ru",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "ym(",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "Baidu Analytics",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "hm.baidu.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "hm.src",
+          "weight": 40
+        }
+      ]
+    },
+    {
+      "name": "Adobe Analytics",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "omtrdc.net",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "2o7.net",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "s_account",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "Adobe Target",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "tt.omtrdc.net",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "adobe.target",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "Adobe Launch",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "assets.adobedtm.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "adobedtm",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "Qualtrics",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "qualtrics.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "QSI.API",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "SurveyMonkey",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "surveymonkey.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "smcx_0",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "Typeform",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "embed.typeform.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "typeform",
+          "weight": 40
+        }
+      ]
+    },
+    {
+      "name": "Medallia",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "medallia.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "KAMPYLE_ONSITE_SDK",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Quantum Metric",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "quantummetric.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "QuantumMetricAPI",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Contentsquare",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "contentsquare.net",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "_uxa",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "SessionCam",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "sessioncam.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "SessionCam",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "Glassbox",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "glassboxdigital.io",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "glassbox",
+          "weight": 40
+        }
+      ]
+    },
+    {
+      "name": "Dynatrace",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "dynatrace.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "dtrum",
+          "weight": 60
+        },
+        {
+          "type": "header",
+          "key": "x-dynatrace",
+          "pattern": "",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "AppDynamics",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "appdynamics.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "adrum",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Elastic APM",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "elastic-apm",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "elasticApm",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "Rollbar",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "rollbar.min.js",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "Rollbar.init",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Bugsnag",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "bugsnag.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "Bugsnag.start",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Raygun",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "raygun.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "rg4js(",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "TrackJS",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "trackjs.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "TrackJS.install",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Airbrake",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "airbrake.io",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "AirbrakeClient",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "LaunchDarkly",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "launchdarkly.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "LDClient",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "Split.io",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "split.io",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "SplitFactory",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Flagsmith",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "flagsmith.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "flagsmith.init",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Statsig",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "statsig.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "statsig.initialize",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Unleash",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "unleash",
+          "weight": 40
+        },
+        {
+          "type": "html",
+          "pattern": "unleash.isEnabled",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Contentstack",
+      "category": "cms",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "contentstack.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "contentstack",
+          "weight": 30
+        }
+      ]
+    },
+    {
+      "name": "DatoCMS",
+      "category": "cms",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "datocms.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "datocms",
+          "weight": 40
+        }
+      ]
+    },
+    {
+      "name": "Directus",
+      "category": "cms",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "header",
+          "key": "x-powered-by",
+          "pattern": "Directus",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "directus",
+          "weight": 30
+        }
+      ]
+    },
+    {
+      "name": "Payload CMS",
+      "category": "cms",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "header",
+          "key": "x-powered-by",
+          "pattern": "Payload",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "payload-cms",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "KeystoneJS",
+      "category": "cms",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "keystonejs",
+          "weight": 50
+        },
+        {
+          "type": "header",
+          "key": "x-powered-by",
+          "pattern": "KeystoneJS",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Concrete CMS",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {
+          "type": "meta",
+          "key": "generator",
+          "pattern": "concrete5",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "concrete5",
+          "weight": 40
+        },
+        {
+          "type": "cookie",
+          "pattern": "CONCRETE5",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Plone",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {
+          "type": "meta",
+          "key": "generator",
+          "pattern": "Plone",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "portal_css",
+          "weight": 50
+        },
+        {
+          "type": "cookie",
+          "pattern": "__ac",
+          "weight": 40
+        }
+      ]
+    },
+    {
+      "name": "Neos CMS",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {
+          "type": "meta",
+          "key": "generator",
+          "pattern": "Neos",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "neos-backend",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "ExpressionEngine",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {
+          "type": "meta",
+          "key": "generator",
+          "pattern": "ExpressionEngine",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "index.php/",
+          "weight": 20
+        },
+        {
+          "type": "cookie",
+          "pattern": "exp_last_visit",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Textpattern",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {
+          "type": "meta",
+          "key": "generator",
+          "pattern": "Textpattern",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "textpattern",
+          "weight": 40
+        }
+      ]
+    },
+    {
+      "name": "ModX",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {
+          "type": "meta",
+          "key": "generator",
+          "pattern": "MODX",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "modx",
+          "weight": 30
+        },
+        {
+          "type": "cookie",
+          "pattern": "modx_remember_manager",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "October CMS",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {
+          "type": "meta",
+          "key": "generator",
+          "pattern": "October CMS",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "octobercms",
+          "weight": 40
+        },
+        {
+          "type": "cookie",
+          "pattern": "october_session",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Grav CMS",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {
+          "type": "meta",
+          "key": "generator",
+          "pattern": "GravCMS",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "grav-base",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "Hugo",
+      "category": "cms",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "meta",
+          "key": "generator",
+          "pattern": "Hugo",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "hugo",
+          "weight": 30
+        }
+      ]
+    },
+    {
+      "name": "Jekyll",
+      "category": "cms",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "meta",
+          "key": "generator",
+          "pattern": "Jekyll",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "jekyll",
+          "weight": 30
+        }
+      ]
+    },
+    {
+      "name": "Hexo",
+      "category": "cms",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "meta",
+          "key": "generator",
+          "pattern": "Hexo",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "hexo",
+          "weight": 30
+        }
+      ]
+    },
+    {
+      "name": "Pelican",
+      "category": "cms",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "meta",
+          "key": "generator",
+          "pattern": "Pelican",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Middleman",
+      "category": "cms",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "meta",
+          "key": "generator",
+          "pattern": "Middleman",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Eleventy",
+      "category": "cms",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "meta",
+          "key": "generator",
+          "pattern": "Eleventy",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "eleventy",
+          "weight": 30
+        }
+      ]
+    },
+    {
+      "name": "Docusaurus",
+      "category": "cms",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "docusaurus",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "__docusaurus",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "GitBook",
+      "category": "cms",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "gitbook",
+          "weight": 50
+        },
+        {
+          "type": "script",
+          "pattern": "gitbook.io",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Notion",
+      "category": "cms",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "notion.so",
+          "weight": 50
+        },
+        {
+          "type": "script",
+          "pattern": "notion.site",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Confluence",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "confluence",
+          "weight": 40
+        },
+        {
+          "type": "meta",
+          "key": "generator",
+          "pattern": "Confluence",
+          "weight": 60
+        },
+        {
+          "type": "cookie",
+          "pattern": "confluence.list.pages.cookie",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "MediaWiki",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {
+          "type": "meta",
+          "key": "generator",
+          "pattern": "MediaWiki",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "mediawiki",
+          "weight": 40
+        },
+        {
+          "type": "script",
+          "pattern": "mediawiki",
+          "weight": 40
+        }
+      ]
+    },
+    {
+      "name": "DokuWiki",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {
+          "type": "meta",
+          "key": "generator",
+          "pattern": "DokuWiki",
+          "weight": 60
+        },
+        {
+          "type": "cookie",
+          "pattern": "DokuWiki",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "vBulletin",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {
+          "type": "meta",
+          "key": "generator",
+          "pattern": "vBulletin",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "vbulletin",
+          "weight": 50
+        },
+        {
+          "type": "cookie",
+          "pattern": "vbsessionhash",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "phpBB",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {
+          "type": "meta",
+          "key": "generator",
+          "pattern": "phpBB",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "phpbb",
+          "weight": 50
+        },
+        {
+          "type": "cookie",
+          "pattern": "phpbb3_",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Discourse",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "discourse",
+          "weight": 40
+        },
+        {
+          "type": "script",
+          "pattern": "discourse.com",
+          "weight": 60
+        },
+        {
+          "type": "meta",
+          "key": "generator",
+          "pattern": "Discourse",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "XenForo",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "xenforo",
+          "weight": 50
+        },
+        {
+          "type": "cookie",
+          "pattern": "xf_session",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Moodle",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {
+          "type": "meta",
+          "key": "generator",
+          "pattern": "Moodle",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "moodle",
+          "weight": 40
+        },
+        {
+          "type": "cookie",
+          "pattern": "MoodleSession",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Canvas LMS",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "instructure.com",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "instructure-uploads.s3",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Teachable",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "teachable.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "teachable",
+          "weight": 40
+        }
+      ]
+    },
+    {
+      "name": "Thinkific",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "thinkific.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "thinkific",
+          "weight": 40
+        }
+      ]
+    },
+    {
+      "name": "Kajabi",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "kajabi.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "kajabi",
+          "weight": 40
+        },
+        {
+          "type": "cookie",
+          "pattern": "kjb_session",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Podia",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "podia.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "podia",
+          "weight": 40
+        }
+      ]
+    },
+    {
+      "name": "Bubble",
+      "category": "frontend",
+      "threshold": 60,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "bubble.io",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "bubble.io",
+          "weight": 60
+        },
+        {
+          "type": "final-url",
+          "pattern": "bubbleapps.io",
+          "weight": 70
+        }
+      ]
+    },
+    {
+      "name": "Webflow CMS",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "webflow.com/api",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "wf-form",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "Framer",
+      "category": "frontend",
+      "threshold": 60,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "framer.com",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "framerusercontent.com",
+          "weight": 60
+        },
+        {
+          "type": "final-url",
+          "pattern": "framer.website",
+          "weight": 70
+        }
+      ]
+    },
+    {
+      "name": "Editor X",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "editorx.com",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "editorx.io",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Jimdo",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "jimdo.com",
+          "weight": 60
+        },
+        {
+          "type": "meta",
+          "key": "generator",
+          "pattern": "Jimdo",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Weebly",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "weebly.com",
+          "weight": 60
+        },
+        {
+          "type": "meta",
+          "key": "generator",
+          "pattern": "Weebly",
+          "weight": 60
+        },
+        {
+          "type": "final-url",
+          "pattern": "weebly.com",
+          "weight": 70
+        }
+      ]
+    },
+    {
+      "name": "Strikingly",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "strikingly.com",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "strikingly.com",
+          "weight": 60
+        },
+        {
+          "type": "final-url",
+          "pattern": "strikingly.com",
+          "weight": 70
+        }
+      ]
+    },
+    {
+      "name": "Cargo",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {
+          "type": "meta",
+          "key": "generator",
+          "pattern": "Cargo",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "cargocollective.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Tilda",
+      "category": "cms",
+      "threshold": 60,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "tilda.ws",
+          "weight": 60
+        },
+        {
+          "type": "meta",
+          "key": "generator",
+          "pattern": "Tilda",
+          "weight": 60
+        },
+        {
+          "type": "final-url",
+          "pattern": "tilda.ws",
+          "weight": 70
+        }
+      ]
+    },
+    {
+      "name": "Spring Framework",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "header",
+          "key": "x-application-context",
+          "pattern": "spring",
+          "weight": 60
+        },
+        {
+          "type": "cookie",
+          "pattern": "SPRING_SECURITY_REMEMBER_ME_COOKIE",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Quarkus",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "header",
+          "key": "x-quarkus-hot-deployment-done",
+          "pattern": "",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Micronaut",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "header",
+          "key": "x-powered-by",
+          "pattern": "Micronaut",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Ktor",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "header",
+          "key": "server",
+          "pattern": "ktor",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Phoenix Framework",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "header",
+          "key": "x-powered-by",
+          "pattern": "Phoenix",
+          "weight": 60
+        },
+        {
+          "type": "cookie",
+          "pattern": "_phoenix",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Gin",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "header",
+          "key": "x-powered-by",
+          "pattern": "gin",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Echo",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "header",
+          "key": "x-powered-by",
+          "pattern": "echo",
+          "weight": 40
+        }
+      ]
+    },
+    {
+      "name": "NestJS",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "header",
+          "key": "x-powered-by",
+          "pattern": "NestJS",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Hono",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "header",
+          "key": "x-powered-by",
+          "pattern": "Hono",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Deno",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "header",
+          "key": "server",
+          "pattern": "deno",
+          "weight": 60
+        },
+        {
+          "type": "header",
+          "key": "x-powered-by",
+          "pattern": "Deno",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Bun",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "header",
+          "key": "x-powered-by",
+          "pattern": "Bun",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "uWSGI",
+      "category": "infra",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "header",
+          "key": "server",
+          "pattern": "uWSGI",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Gunicorn",
+      "category": "infra",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "header",
+          "key": "server",
+          "pattern": "gunicorn",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Puma",
+      "category": "infra",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "header",
+          "key": "server",
+          "pattern": "Puma",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Unicorn",
+      "category": "infra",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "header",
+          "key": "server",
+          "pattern": "unicorn",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Passenger",
+      "category": "infra",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "header",
+          "key": "server",
+          "pattern": "Passenger",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Tomcat",
+      "category": "infra",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "header",
+          "key": "server",
+          "pattern": "Apache-Coyote",
+          "weight": 60
+        },
+        {
+          "type": "header",
+          "key": "server",
+          "pattern": "Tomcat",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "JBoss",
+      "category": "infra",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "header",
+          "key": "server",
+          "pattern": "JBoss",
+          "weight": 60
+        },
+        {
+          "type": "header",
+          "key": "x-powered-by",
+          "pattern": "JBoss",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "WebLogic",
+      "category": "infra",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "header",
+          "key": "server",
+          "pattern": "WebLogic",
+          "weight": 60
+        },
+        {
+          "type": "cookie",
+          "pattern": "WEBLOGIC_SKIPLOGOUT",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "WebSphere",
+      "category": "infra",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "header",
+          "key": "server",
+          "pattern": "WebSphere",
+          "weight": 60
+        },
+        {
+          "type": "cookie",
+          "pattern": "JSESSIONID",
+          "weight": 20
+        }
+      ]
+    },
+    {
+      "name": "GlassFish",
+      "category": "infra",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "header",
+          "key": "server",
+          "pattern": "GlassFish",
+          "weight": 60
+        },
+        {
+          "type": "header",
+          "key": "x-powered-by",
+          "pattern": "GlassFish",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Plesk",
+      "category": "infra",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "plesk.com",
+          "weight": 60
+        },
+        {
+          "type": "header",
+          "key": "x-powered-by",
+          "pattern": "PleskLin",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "cPanel",
+      "category": "infra",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "cPanel",
+          "weight": 50
+        },
+        {
+          "type": "header",
+          "key": "x-powered-by",
+          "pattern": "cPanel",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Cloudflare Pages",
+      "category": "infra",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "header",
+          "key": "cf-cache-status",
+          "pattern": "",
+          "weight": 40
+        },
+        {
+          "type": "dns",
+          "pattern": "pages.dev",
+          "weight": 60
+        },
+        {
+          "type": "final-url",
+          "pattern": "pages.dev",
+          "weight": 70
+        }
+      ]
+    },
+    {
+      "name": "GitHub Pages",
+      "category": "infra",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "dns",
+          "pattern": "github.io",
+          "weight": 60
+        },
+        {
+          "type": "header",
+          "key": "server",
+          "pattern": "GitHub.com",
+          "weight": 60
+        },
+        {
+          "type": "final-url",
+          "pattern": "github.io",
+          "weight": 70
+        }
+      ]
+    },
+    {
+      "name": "GitLab Pages",
+      "category": "infra",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "dns",
+          "pattern": "gitlab.io",
+          "weight": 60
+        },
+        {
+          "type": "final-url",
+          "pattern": "gitlab.io",
+          "weight": 70
+        }
+      ]
+    },
+    {
+      "name": "Surge.sh",
+      "category": "infra",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "dns",
+          "pattern": "surge.sh",
+          "weight": 60
+        },
+        {
+          "type": "final-url",
+          "pattern": "surge.sh",
+          "weight": 70
+        }
+      ]
+    },
+    {
+      "name": "Deno Deploy",
+      "category": "infra",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "dns",
+          "pattern": "deno.dev",
+          "weight": 60
+        },
+        {
+          "type": "header",
+          "key": "server",
+          "pattern": "deno",
+          "weight": 50
+        },
+        {
+          "type": "final-url",
+          "pattern": "deno.dev",
+          "weight": 70
+        }
+      ]
+    },
+    {
+      "name": "Storybook",
+      "category": "frontend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "storybook",
+          "weight": 40
+        },
+        {
+          "type": "script",
+          "pattern": "storybook",
+          "weight": 40
+        }
+      ]
+    },
+    {
+      "name": "Ionic",
+      "category": "frontend",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "ion-app",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "ionic.io",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "ion-content",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "Capacitor",
+      "category": "frontend",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "capacitor",
+          "weight": 50
+        },
+        {
+          "type": "html",
+          "pattern": "capacitor",
+          "weight": 40
+        }
+      ]
+    },
+    {
+      "name": "PWA",
+      "category": "frontend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "serviceWorker",
+          "weight": 40
+        },
+        {
+          "type": "link",
+          "pattern": "manifest.json",
+          "weight": 40
+        },
+        {
+          "type": "link",
+          "pattern": "site.webmanifest",
+          "weight": 40
+        }
+      ]
+    },
+    {
+      "name": "AMP",
+      "category": "frontend",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "<html amp",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "<html \u26a1",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "cdn.ampproject.org",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Turbo",
+      "category": "frontend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "turbo.js",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "turbo-frame",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Inertia.js",
+      "category": "frontend",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "data-page=",
+          "weight": 50
+        },
+        {
+          "type": "html",
+          "pattern": "inertia",
+          "weight": 30
+        },
+        {
+          "type": "header",
+          "key": "x-inertia",
+          "pattern": "",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Livewire",
+      "category": "frontend",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "wire:id=",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "livewire",
+          "weight": 50
+        },
+        {
+          "type": "html",
+          "pattern": "livewire:load",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Stimulus",
+      "category": "frontend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "data-controller=",
+          "weight": 40
+        },
+        {
+          "type": "script",
+          "pattern": "stimulus",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "Hotwire",
+      "category": "frontend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "hotwired",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "turbo-stream",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Ably",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "ably.io",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "cdn.ably.io",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Pusher",
+      "category": "backend",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "js.pusher.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "Pusher(",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "Stripe Radar",
+      "category": "security",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "m.stripe.network",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "m.stripe.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Cloudflare Stream",
+      "category": "media",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "cloudflarestream.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "cloudflarestream.com/embed",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Kaltura",
+      "category": "media",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "kaltura.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "kaltura_player",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Brightcove",
+      "category": "media",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "brightcove.com",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "players.brightcove.net",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Dailymotion",
+      "category": "media",
+      "threshold": 30,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "dailymotion.com/embed",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "geo.dailymotion.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Loom",
+      "category": "media",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "loom.com/embed",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "loom.com",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "Bunny Stream",
+      "category": "media",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "iframe.mediadelivery.net",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Iframely",
+      "category": "media",
+      "threshold": 30,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "iframely.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Mailjet",
+      "category": "email",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "dns",
+          "pattern": "mailjet.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Elastic Email",
+      "category": "email",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "dns",
+          "pattern": "elasticemail.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Mandrill",
+      "category": "email",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "dns",
+          "pattern": "mandrillapp.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "SMTP2GO",
+      "category": "email",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "dns",
+          "pattern": "smtp2go.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Fastmail",
+      "category": "email",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "dns",
+          "pattern": "fastmail.com",
+          "weight": 60
+        },
+        {
+          "type": "dns",
+          "pattern": "fastmail.fm",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Rackspace Email",
+      "category": "email",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "dns",
+          "pattern": "emailsrvr.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Salesforce Marketing Cloud",
+      "category": "email",
+      "threshold": 50,
+      "rules": [
+        {
+          "type": "dns",
+          "pattern": "exacttarget.com",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "exacttarget.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Iterable",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "iterable.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Customer.io",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "customer.io",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "assets.customer.io",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Drip",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "getdrip.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "dc.drip.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "ConvertKit",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "convertkit.com",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "ck-page.convertkit.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Sendinblue Tracker",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "sibautomation.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Clearbit",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "clearbit.com",
+          "weight": 60
+        },
+        {
+          "type": "script",
+          "pattern": "x.clearbitjs.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "ZoomInfo",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "ws.zoominfo.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Leadfeeder",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "lf-cdn.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Albacross",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "albacross.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Rollworks",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "rollworks.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "6sense",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "6sc.co",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "6sense",
+          "weight": 40
+        }
+      ]
+    },
+    {
+      "name": "Demandbase",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "demandbase.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Usercentrics",
+      "category": "security",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "usercentrics.eu",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "usercentrics",
+          "weight": 40
+        }
+      ]
+    },
+    {
+      "name": "Didomi",
+      "category": "security",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "sdk.privacy-center.org",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "didomi",
+          "weight": 40
+        }
+      ]
+    },
+    {
+      "name": "Civic Cookie Control",
+      "category": "security",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "cc.cdn.civiccomputing.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "CookieControl",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Cookie Information",
+      "category": "security",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "cookie-information.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Clicky",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "static.getclicky.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "clicky_site_ids",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Woopra",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "woopra.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "woopra.track(",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Chartbeat",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "static.chartbeat.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "chartbeat",
+          "weight": 40
+        }
+      ]
+    },
+    {
+      "name": "Parse.ly",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "parsely.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "parsely-page",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Nielsen",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "cdn-gl.imrworldwide.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "nielsen",
+          "weight": 30
+        }
+      ]
+    },
+    {
+      "name": "comScore",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "sb.scorecardresearch.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "comscore",
+          "weight": 40
+        }
+      ]
+    },
+    {
+      "name": "Wistia Turnstile",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "html",
+          "pattern": "wistia-turnstile",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Podscribe",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "podscribe.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Nosto",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "nosto.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "nostojs",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Dynamic Yield",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "dynamicyield.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "DY.API",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Monetate",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "monetate.net",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "monetateT.start",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Barilliance",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "barilliance.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "RichRelevance",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "richrelevance.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Certona",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "certona.net",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Kibo Personalization",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "kibocommerce.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Searchspring",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "searchspring.net",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Klevu",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "klevu.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "klevu_search",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Doofinder",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "doofinder.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Coveo",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "coveo.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "CoveoSearchInterface",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Bazaarvoice",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "bazaarvoice.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "bv_auth_token",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Yotpo",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "yotpo.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "yotpo-widget",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Trustpilot",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "trustpilot.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "trustpilot-widget",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Reviews.io",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "reviews.io",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "reviewsio",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "Stamped.io",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "stamped.io",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "stamped-reviews",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Judge.me",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "judge.me",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "jdgm-widget",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Tidio",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "code.tidio.co",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "HelpScout",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "beacon-v2.helpscout.net",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "Beacon(",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "name": "Front",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "front.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "FrontChat",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Gorgias",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "gorgias.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "GorgiasChat",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Re:amaze",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "reamaze.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "reamazejs",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Kustomer",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "kustomer.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Gladly",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "gladly.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Smartlook",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "smartlook.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "smartlook",
+          "weight": 40
+        }
+      ]
+    },
+    {
+      "name": "Inspectlet",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "inspectlet.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "__insp_",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "UXCam",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "uxcam.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Sprig",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "cdn.sprig.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Refiner",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "refiner.io",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Survicate",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "survicate.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Delighted",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "d8.delighted.com",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Wootric",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "wootric.com",
+          "weight": 60
+        },
+        {
+          "type": "html",
+          "pattern": "wootric_survey_immediately",
+          "weight": 60
+        }
+      ]
+    },
+    {
+      "name": "Satismeter",
+      "category": "analytics",
+      "threshold": 40,
+      "rules": [
+        {
+          "type": "script",
+          "pattern": "app.satismeter.com",
+          "weight": 60
+        }
       ]
     }
-
   ]
 }

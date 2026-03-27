@@ -20,5 +20,5 @@ for i, domain in enumerate(domains):
 
     print(domain, engine.detect(technologies, engine.fetch(domain)))
 
-# print(engine.fetch(domains[11])['http'])
+# print(engine.fetch(domains[4])['https']['final-url'])
 # engine.detect(engine.read_technology(technologies_file), engine.fetch(domains[11]))

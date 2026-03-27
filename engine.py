@@ -64,7 +64,16 @@ def matching_pattern(rule, data):
 
     match rule['type']:
         case 'html':
-            if data[protocol][rule['type']].lower():
+            if rule['pattern'].lower() in data[protocol][rule['type']].lower():
+                return True
+            return False
+        case 'link':
+            for l in data[protocol][rule['type']]:
+                if rule['pattern'].lower() in l.lower():
+                    return True
+            return False
+        case 'final-url':
+            if rule['pattern'].lower() in data[protocol][rule['type']].lower():
                 return True
             return False
         case 'meta':
