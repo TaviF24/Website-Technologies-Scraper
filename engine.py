@@ -3,6 +3,7 @@ import requests
 import bs4
 import dns.resolver
 import json
+from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
 
 def fetch(domain):
     result = {'http':{}, 'https':{}}
@@ -54,30 +55,41 @@ def read_technology(input_file):
         data_json = json.load(f)
     return data_json
 
-def matching_pattern(rule, data):
-    protocol = 'https'
+def matching_pattern(rule, static_data, headless_data):
+    protocol_static = 'https'
+    protocol_headless = 'https'
+
     if rule['type'] != 'dns':
-        if data[protocol].get('error') is not None:
-            protocol = 'http'
-            if data[protocol].get('error') is not None:
+        if static_data[protocol_static].get('error') is not None:
+            protocol_static = 'http'
+            if static_data[protocol_static].get('error') is not None:
+                return False
+        if headless_data[protocol_headless].get('error') is not None:
+            protocol_headless = 'http'
+            if headless_data[protocol_headless].get('error') is not None:
                 return False
 
     match rule['type']:
         case 'html':
-            if rule['pattern'].lower() in data[protocol][rule['type']].lower():
+            if rule['pattern'].lower() in static_data[protocol_static][rule['type']].lower():
+                return True
+            if rule['pattern'].lower() in headless_data[protocol_headless]['rendered_html'].lower():
                 return True
             return False
         case 'link':
-            for l in data[protocol][rule['type']]:
+            for l in static_data[protocol_static][rule['type']]:
                 if rule['pattern'].lower() in l.lower():
+                    return True
+            for url in headless_data[protocol_headless]['network_requests']:
+                if rule['pattern'].lower() in url.lower():
                     return True
             return False
         case 'final-url':
-            if rule['pattern'].lower() in data[protocol][rule['type']].lower():
+            if rule['pattern'].lower() in static_data[protocol_static][rule['type']].lower():
                 return True
             return False
         case 'meta':
-            for d in data[protocol]['meta']:
+            for d in static_data[protocol_static]['meta']:
                 meta_key = d.get('name') or d.get('property')
                 if meta_key and meta_key.lower() == rule['key'].lower():
                     content = d.get('content', '')
@@ -85,40 +97,106 @@ def matching_pattern(rule, data):
                         return True
             return False
         case 'cookie':
-            for cookie in data[protocol]['cookie']:
+            for cookie in static_data[protocol_static]['cookie']:
                 if rule['pattern'].lower() in cookie.lower():
                     return True
             return False
         case 'script':
-            for script in data[protocol]['script']:
+            for script in static_data[protocol_static]['script']:
                 if script and rule['pattern'].lower() in script.lower():
+                    return True
+            for url in headless_data[protocol_headless]['network_requests']:
+                if rule['pattern'].lower() in url.lower():
                     return True
             return False
         case 'header':
-            if data[protocol][rule['type']].get(rule['key']):
-                if rule['pattern'].lower() in data[protocol][rule['type']][rule['key']].lower():
+            if static_data[protocol_static][rule['type']].get(rule['key']):
+                if rule['pattern'].lower() in static_data[protocol_static][rule['type']][rule['key']].lower():
                     return True
             return False
         case 'dns':
-            for k, records in data['dns'].items():
+            for k, records in static_data['dns'].items():
                 if k == 'error':
                     continue
                 for record in records:
                     if rule['pattern'].lower() in record.lower():
                         return True
             return False
+
+        case 'rendered_html':
+            if rule['pattern'].lower() in  headless_data[protocol_headless][rule['type']].lower():
+                return True
+            return False
+        case 'window_properties':
+            for prop in headless_data[protocol_headless]['window_properties']:
+                if rule['pattern'].lower() in prop.lower():
+                    return True
+            return False
+        case 'network_requests':
+            for url in headless_data[protocol_headless]['network_requests']:
+                if rule['pattern'].lower() in url.lower():
+                    return True
+            return False
+
         case _:
             return False
 
-def detect(technology, fetched_data):
+def detect(technology, fetched_data, headless_fetched_data):
     total = 0
+    techs = set()
     for tech in technology['technologies']:
         score = 0
         for rule in tech['rules']:
-            if matching_pattern(rule, fetched_data):
+            if matching_pattern(rule, fetched_data, headless_fetched_data):
                 score += rule['weight']
                 # print(tech['name'], rule['type'])
         if score >= tech['threshold']:
             total += 1
+            techs.add(tech['name'])
             # print("Found technology: " + tech['name'] + " | Score: " + str(score))
-    return total
+    return total, techs
+
+
+def fetch_headless(domain):
+    result = {
+        'http': {
+            'rendered_html': '',
+            'network_requests': [],
+            'window_properties': [],
+            'error': None
+        },
+        'https': {
+            'rendered_html': '',
+            'network_requests': [],
+            'window_properties': [],
+            'error': None
+        }
+    }
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True)
+
+        for protocol in ['http', 'https']:
+            url = f"{protocol}://{domain}"
+            page = browser.new_page()
+            page.on("request", lambda request, prot=protocol: result[prot]['network_requests'].append(request.url))
+
+            try:
+                page.goto(url, wait_until="load", timeout=15000)
+            except PlaywrightTimeoutError:
+                result[protocol]['error'] = 'timeout_but_extracted'
+            except Exception as e:
+                result[protocol]['error'] = str(e)
+                page.close()
+                continue
+
+            try:
+                page.wait_for_timeout(2000)
+                result[protocol]['rendered_html'] = page.content()
+                result[protocol]['window_properties'] = page.evaluate("Object.keys(window)")
+            except Exception as e:
+                print(f"Failed to extract DOM/Window from {url}: {e}")
+            finally:
+                page.close()
+        browser.close()
+    return result
