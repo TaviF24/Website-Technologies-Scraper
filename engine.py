@@ -4,13 +4,15 @@ import bs4
 import dns.resolver
 import json
 from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
+from playwright_stealth.stealth import Stealth
+
 
 def fetch(domain):
     result = {'http':{}, 'https':{}}
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
-    for protocol in ['http', 'https']:
+    for protocol in ['https', 'http']:
         try:
             resp = requests.get(protocol + '://' + domain, headers=headers, timeout=5)
             result[protocol]['cookie'] = [cookie.name for cookie in resp.cookies]
@@ -33,6 +35,10 @@ def fetch(domain):
             result[protocol]['error'] = 'connection_error'
         except:
             print("Unexpected error:", sys.exc_info()[0])
+
+        if protocol == 'https' and result['https'].get('error') is None:
+            result['http'] = result['https'].copy()
+            break
 
     result['dns'] = {'error' : {}}
     for record_type in ['A', 'CNAME', 'MX', 'TXT']:
@@ -100,6 +106,9 @@ def matching_pattern(rule, static_data, headless_data):
             for cookie in static_data[protocol_static]['cookie']:
                 if rule['pattern'].lower() in cookie.lower():
                     return True
+            for cookie in headless_data[protocol_headless].get('js_cookies', []):
+                if rule['pattern'].lower() in cookie.lower():
+                    return True
             return False
         case 'script':
             for script in static_data[protocol_static]['script']:
@@ -142,19 +151,18 @@ def matching_pattern(rule, static_data, headless_data):
             return False
 
 def detect(technology, fetched_data, headless_fetched_data):
-    total = 0
-    techs = set()
+    result = {}
     for tech in technology['technologies']:
         score = 0
+        r = []
         for rule in tech['rules']:
             if matching_pattern(rule, fetched_data, headless_fetched_data):
                 score += rule['weight']
-                # print(tech['name'], rule['type'])
+                r = {'type' : rule['type'], 'weight' : rule['weight'], 'pattern' : rule['pattern']}
         if score >= tech['threshold']:
-            total += 1
-            techs.add(tech['name'])
-            # print("Found technology: " + tech['name'] + " | Score: " + str(score))
-    return total, techs
+            r['threshold'] = tech['threshold']
+            result[tech['name']] = r
+    return result
 
 
 def fetch_headless(domain):
@@ -176,13 +184,16 @@ def fetch_headless(domain):
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
 
-        for protocol in ['http', 'https']:
+        for protocol in ['https', 'http']:
             url = f"{protocol}://{domain}"
             page = browser.new_page()
+            stealth = Stealth()
+            stealth.apply_stealth_sync(page)
             page.on("request", lambda request, prot=protocol: result[prot]['network_requests'].append(request.url))
 
             try:
-                page.goto(url, wait_until="load", timeout=15000)
+                page.goto(url, wait_until="domcontentloaded", timeout=15000)
+                # page.goto(url, wait_until="load", timeout=15000)
             except PlaywrightTimeoutError:
                 result[protocol]['error'] = 'timeout_but_extracted'
             except Exception as e:
@@ -191,12 +202,29 @@ def fetch_headless(domain):
                 continue
 
             try:
-                page.wait_for_timeout(2000)
+                page.wait_for_load_state('networkidle', 5000)
+                # page.wait_for_timeout(2000)
+            except:
+                pass
+
+
+            try:
                 result[protocol]['rendered_html'] = page.content()
                 result[protocol]['window_properties'] = page.evaluate("Object.keys(window)")
+                result[protocol]['js_cookies'] = [c['name'] for c in page.context.cookies()]
             except Exception as e:
-                print(f"Failed to extract DOM/Window from {url}: {e}")
+                try:
+                    page.wait_for_timeout(1000)
+                    result[protocol]['rendered_html'] = page.content()
+                    result[protocol]['window_properties'] = page.evaluate("Object.keys(window)")
+                    result[protocol]['js_cookies'] = [c['name'] for c in page.context.cookies()]
+                except Exception as e2:
+                    print(f"Failed to extract DOM/Window from {url}: {e2}")
             finally:
                 page.close()
+
+            if protocol == 'https' and result['https']['error'] is None:
+                result['http'] = result['https'].copy()
+                break
         browser.close()
     return result
