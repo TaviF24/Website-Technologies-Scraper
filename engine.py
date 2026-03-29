@@ -26,6 +26,7 @@ def fetch(domain):
             result[protocol]['link'] = [l.get('href') for l in html_doc.find_all('link') if l.get('href')]
             result[protocol]['script'] = [s.get('src') for s in html_doc.find_all('script') if s.get('src')]
             result[protocol]['anchor'] = [a.get('href') for a in html_doc.find_all('a') if a.get('href')]
+            result[protocol]['inline_scripts'] = [s.string for s in html_doc.find_all('script') if not s.get('src') and s.string]
 
         except requests.exceptions.Timeout:
             result[protocol]['error'] = 'timeout'
@@ -81,6 +82,9 @@ def matching_pattern(rule, static_data, headless_data):
                 return True
             if rule['pattern'].lower() in headless_data[protocol_headless]['rendered_html'].lower():
                 return True
+            for s in static_data[protocol_static]['inline_scripts']:
+                if rule['pattern'].lower() in s.lower():
+                    return True
             return False
         case 'link':
             for l in static_data[protocol_static][rule['type']]:
@@ -158,12 +162,12 @@ def detect(technology, fetched_data, headless_fetched_data):
         for rule in tech['rules']:
             if matching_pattern(rule, fetched_data, headless_fetched_data):
                 score += rule['weight']
-                r = {'type' : rule['type'], 'weight' : rule['weight'], 'pattern' : rule['pattern']}
+                r.append({'type' : rule['type'], 'weight' : rule['weight'], 'pattern' : rule['pattern']})
         if score >= tech['threshold']:
-            r['threshold'] = tech['threshold']
+            r.append({'threshold' : tech['threshold']})
+            # r['threshold'] = tech['threshold']
             result[tech['name']] = r
     return result
-
 
 def fetch_headless(domain):
     result = {
@@ -171,12 +175,14 @@ def fetch_headless(domain):
             'rendered_html': '',
             'network_requests': [],
             'window_properties': [],
+            'js_cookies': [],
             'error': None
         },
         'https': {
             'rendered_html': '',
             'network_requests': [],
             'window_properties': [],
+            'js_cookies': [],
             'error': None
         }
     }
@@ -202,8 +208,7 @@ def fetch_headless(domain):
                 continue
 
             try:
-                page.wait_for_load_state('networkidle', 5000)
-                # page.wait_for_timeout(2000)
+                page.wait_for_load_state('networkidle', timeout=5000)
             except:
                 pass
 

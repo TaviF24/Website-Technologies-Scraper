@@ -62,7 +62,7 @@ print("Total different technologies detected:", len(unique_found_tech))
 if args.output_file:
     output_file = args.output_file + ".json"
     with open(output_file, "w") as f:
-        json.dump(result, f, indent=4)
+        json.dump(result, f, indent=2)
 
 for i, domain in enumerate(domains):
     # if i == 20:
