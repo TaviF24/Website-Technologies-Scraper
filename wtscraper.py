@@ -35,6 +35,7 @@ if args.input_file:
         case ".parquet":
             df = pd.read_parquet(args.input_file)
             if df is not None and len(df.columns) > 0:
+                print("Detected .parquet file. Reading first column for domains")
                 domains.extend(df[df.columns[0]].tolist())
         case ".txt":
             with open(args.input_file, "r") as f:
