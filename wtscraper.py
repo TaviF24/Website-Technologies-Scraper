@@ -1,6 +1,5 @@
 import argparse
 import json
-import multiprocessing
 import os
 import engine
 import pandas as pd
@@ -65,8 +64,6 @@ if args.output_file:
         json.dump(result, f, indent=2)
 
 for i, domain in enumerate(domains):
-    # if i == 20:
-    #     break
     print(f"\n{i + 1}. Found {len(result[domain])} technologies for {domain}",end='')
     if args.verbose:
         technologies = result[domain]

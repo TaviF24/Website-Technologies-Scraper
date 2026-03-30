@@ -162,10 +162,12 @@ def detect(technology, fetched_data, headless_fetched_data):
         for rule in tech['rules']:
             if matching_pattern(rule, fetched_data, headless_fetched_data):
                 score += rule['weight']
-                r.append({'type' : rule['type'], 'weight' : rule['weight'], 'pattern' : rule['pattern']})
+                d = {'type' : rule['type'], 'weight' : rule['weight'], 'pattern' : rule['pattern']}
+                if rule['type'] == 'header':
+                    d['key'] = rule['key']
+                r.append(d)
         if score >= tech['threshold']:
             r.append({'threshold' : tech['threshold']})
-            # r['threshold'] = tech['threshold']
             result[tech['name']] = r
     return result
 
@@ -199,7 +201,6 @@ def fetch_headless(domain):
 
             try:
                 page.goto(url, wait_until="domcontentloaded", timeout=15000)
-                # page.goto(url, wait_until="load", timeout=15000)
             except PlaywrightTimeoutError:
                 result[protocol]['error'] = 'timeout_but_extracted'
             except Exception as e:

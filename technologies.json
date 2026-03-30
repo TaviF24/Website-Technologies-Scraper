@@ -412,7 +412,7 @@
         {
           "type": "window_properties",
           "pattern": "hj",
-          "weight": 50
+          "weight": 70
         },
         {
           "type": "network_requests",
@@ -423,11 +423,6 @@
           "type": "script",
           "pattern": "static.hotjar.com",
           "weight": 60
-        },
-        {
-          "type": "window_properties",
-          "pattern": "hj",
-          "weight": 70
         }
       ]
     },
@@ -520,12 +515,6 @@
       "category": "infra",
       "threshold": 40,
       "rules": [
-        {
-          "type": "header",
-          "key": "server",
-          "pattern": "nginx",
-          "weight": 50
-        },
         {
           "type": "header",
           "key": "server",
@@ -660,12 +649,6 @@
           "type": "rendered_html",
           "pattern": "Drupal.settings",
           "weight": 60
-        },
-        {
-          "type": "meta",
-          "key": "Generator",
-          "pattern": "Drupal",
-          "weight": 60
         }
       ]
     },
@@ -720,7 +703,7 @@
         {
           "type": "cookie",
           "pattern": "frontend",
-          "weight": 30
+          "weight": 40
         },
         {
           "type": "script",
@@ -738,19 +721,9 @@
           "weight": 60
         },
         {
-          "type": "cookie",
-          "pattern": "frontend",
-          "weight": 40
-        },
-        {
           "type": "script",
           "pattern": "mage/cookies",
           "weight": 60
-        },
-        {
-          "type": "window_properties",
-          "pattern": "mage",
-          "weight": 50
         }
       ]
     },
@@ -992,18 +965,12 @@
           "type": "header",
           "key": "server",
           "pattern": "Netlify",
-          "weight": 50
+          "weight": 60
         },
         {
           "type": "final-url",
           "pattern": "netlify.app",
           "weight": 70
-        },
-        {
-          "type": "header",
-          "key": "server",
-          "pattern": "Netlify",
-          "weight": 60
         }
       ]
     },
@@ -1100,12 +1067,6 @@
           "key": "csrf-param",
           "pattern": "authenticity_token",
           "weight": 60
-        },
-        {
-          "type": "header",
-          "key": "x-powered-by",
-          "pattern": "Phusion Passenger",
-          "weight": 40
         }
       ]
     },
@@ -1159,7 +1120,7 @@
         {
           "type": "window_properties",
           "pattern": "zE",
-          "weight": 60
+          "weight": 70
         },
         {
           "type": "network_requests",
@@ -1170,11 +1131,6 @@
           "type": "script",
           "pattern": "static.zdassets.com",
           "weight": 60
-        },
-        {
-          "type": "window_properties",
-          "pattern": "zE",
-          "weight": 70
         }
       ]
     },
@@ -1238,7 +1194,7 @@
         {
           "type": "window_properties",
           "pattern": "mixpanel",
-          "weight": 60
+          "weight": 70
         },
         {
           "type": "network_requests",
@@ -1249,11 +1205,6 @@
           "type": "script",
           "pattern": "cdn.mxpnl.com",
           "weight": 60
-        },
-        {
-          "type": "window_properties",
-          "pattern": "mixpanel",
-          "weight": 70
         }
       ]
     },
@@ -1275,16 +1226,11 @@
         {
           "type": "window_properties",
           "pattern": "analytics",
-          "weight": 40
+          "weight": 60
         },
         {
           "type": "network_requests",
           "pattern": "cdn.segment.com",
-          "weight": 60
-        },
-        {
-          "type": "window_properties",
-          "pattern": "analytics",
           "weight": 60
         }
       ]
@@ -1507,7 +1453,7 @@
         {
           "type": "script",
           "pattern": "alpinejs",
-          "weight": 50
+          "weight": 60
         },
         {
           "type": "html",
@@ -1523,11 +1469,6 @@
           "type": "rendered_html",
           "pattern": "x-data=",
           "weight": 40
-        },
-        {
-          "type": "script",
-          "pattern": "alpinejs",
-          "weight": 60
         },
         {
           "type": "window_properties",
@@ -1581,7 +1522,7 @@
         {
           "type": "script",
           "pattern": "three.min.js",
-          "weight": 50
+          "weight": 60
         },
         {
           "type": "script",
@@ -1592,11 +1533,6 @@
           "type": "window_properties",
           "pattern": "THREE",
           "weight": 70
-        },
-        {
-          "type": "script",
-          "pattern": "three.min.js",
-          "weight": 60
         }
       ]
     },
@@ -1608,7 +1544,7 @@
         {
           "type": "script",
           "pattern": "d3.min.js",
-          "weight": 50
+          "weight": 60
         },
         {
           "type": "script",
@@ -1619,16 +1555,6 @@
           "type": "script",
           "pattern": "d3js.org",
           "weight": 50
-        },
-        {
-          "type": "window_properties",
-          "pattern": "d3",
-          "weight": 60
-        },
-        {
-          "type": "script",
-          "pattern": "d3.min.js",
-          "weight": 60
         },
         {
           "type": "window_properties",
@@ -1645,22 +1571,12 @@
         {
           "type": "script",
           "pattern": "chart.min.js",
-          "weight": 50
+          "weight": 60
         },
         {
           "type": "script",
           "pattern": "chartjs",
           "weight": 50
-        },
-        {
-          "type": "window_properties",
-          "pattern": "Chart",
-          "weight": 60
-        },
-        {
-          "type": "script",
-          "pattern": "chart.min.js",
-          "weight": 60
         },
         {
           "type": "window_properties",
@@ -1704,17 +1620,12 @@
         {
           "type": "script",
           "pattern": "moment.min.js",
-          "weight": 50
+          "weight": 60
         },
         {
           "type": "script",
           "pattern": "moment.js",
           "weight": 50
-        },
-        {
-          "type": "script",
-          "pattern": "moment.min.js",
-          "weight": 60
         },
         {
           "type": "window_properties",
@@ -1787,7 +1698,7 @@
         {
           "type": "script",
           "pattern": "gsap.min.js",
-          "weight": 50
+          "weight": 60
         },
         {
           "type": "script",
@@ -1802,22 +1713,12 @@
         {
           "type": "window_properties",
           "pattern": "gsap",
-          "weight": 60
+          "weight": 70
         },
         {
           "type": "network_requests",
           "pattern": "gsap.min.js",
           "weight": 60
-        },
-        {
-          "type": "script",
-          "pattern": "gsap.min.js",
-          "weight": 60
-        },
-        {
-          "type": "window_properties",
-          "pattern": "gsap",
-          "weight": 70
         }
       ]
     },
@@ -2124,7 +2025,7 @@
         {
           "type": "cookie",
           "pattern": "csrftoken",
-          "weight": 50
+          "weight": 60
         },
         {
           "type": "cookie",
@@ -2135,11 +2036,6 @@
           "type": "html",
           "pattern": "csrfmiddlewaretoken",
           "weight": 50
-        },
-        {
-          "type": "cookie",
-          "pattern": "csrftoken",
-          "weight": 60
         },
         {
           "type": "cookie",
@@ -2520,17 +2416,12 @@
         {
           "type": "window_properties",
           "pattern": "amplitude",
-          "weight": 60
+          "weight": 70
         },
         {
           "type": "network_requests",
           "pattern": "amplitude.com",
           "weight": 60
-        },
-        {
-          "type": "window_properties",
-          "pattern": "amplitude",
-          "weight": 70
         }
       ]
     },
@@ -2552,7 +2443,7 @@
         {
           "type": "window_properties",
           "pattern": "heap",
-          "weight": 60
+          "weight": 70
         },
         {
           "type": "network_requests",
@@ -2563,11 +2454,6 @@
           "type": "script",
           "pattern": "cdn.heapanalytics.com",
           "weight": 60
-        },
-        {
-          "type": "window_properties",
-          "pattern": "heap",
-          "weight": 70
         }
       ]
     },
@@ -2589,7 +2475,7 @@
         {
           "type": "window_properties",
           "pattern": "FS",
-          "weight": 50
+          "weight": 70
         },
         {
           "type": "network_requests",
@@ -2600,11 +2486,6 @@
           "type": "script",
           "pattern": "edge.fullstory.com",
           "weight": 60
-        },
-        {
-          "type": "window_properties",
-          "pattern": "FS",
-          "weight": 70
         }
       ]
     },
@@ -2692,7 +2573,7 @@
         {
           "type": "window_properties",
           "pattern": "optimizely",
-          "weight": 60
+          "weight": 70
         },
         {
           "type": "network_requests",
@@ -2703,11 +2584,6 @@
           "type": "script",
           "pattern": "cdn.optimizely.com",
           "weight": 60
-        },
-        {
-          "type": "window_properties",
-          "pattern": "optimizely",
-          "weight": 70
         }
       ]
     },
@@ -2729,7 +2605,7 @@
         {
           "type": "window_properties",
           "pattern": "VWO",
-          "weight": 60
+          "weight": 70
         },
         {
           "type": "network_requests",
@@ -2740,11 +2616,6 @@
           "type": "script",
           "pattern": "dev.visualwebsiteoptimizer.com",
           "weight": 60
-        },
-        {
-          "type": "window_properties",
-          "pattern": "VWO",
-          "weight": 70
         }
       ]
     },
@@ -2766,7 +2637,7 @@
         {
           "type": "window_properties",
           "pattern": "drift",
-          "weight": 60
+          "weight": 70
         },
         {
           "type": "network_requests",
@@ -2777,11 +2648,6 @@
           "type": "script",
           "pattern": "js.driftt.com",
           "weight": 60
-        },
-        {
-          "type": "window_properties",
-          "pattern": "drift",
-          "weight": 70
         }
       ]
     },
@@ -3496,18 +3362,13 @@
         },
         {
           "type": "window_properties",
-          "pattern": "auth0",
-          "weight": 60
+          "pattern": "Auth0",
+          "weight": 70
         },
         {
           "type": "network_requests",
           "pattern": "auth0.com",
           "weight": 60
-        },
-        {
-          "type": "window_properties",
-          "pattern": "Auth0",
-          "weight": 70
         }
       ]
     },
@@ -4413,7 +4274,7 @@
         {
           "type": "window_properties",
           "pattern": "io",
-          "weight": 30
+          "weight": 50
         },
         {
           "type": "network_requests",
@@ -4424,11 +4285,6 @@
           "type": "script",
           "pattern": "socket.io",
           "weight": 60
-        },
-        {
-          "type": "window_properties",
-          "pattern": "io",
-          "weight": 50
         }
       ]
     },
@@ -4622,11 +4478,6 @@
           "key": "server",
           "pattern": "haproxy",
           "weight": 60
-        },
-        {
-          "type": "cookie",
-          "pattern": "SERVERID",
-          "weight": 40
         },
         {
           "type": "cookie",
@@ -5586,11 +5437,6 @@
         {
           "type": "network_requests",
           "pattern": "algolianet.com",
-          "weight": 60
-        },
-        {
-          "type": "window_properties",
-          "pattern": "algoliasearch",
           "weight": 60
         }
       ]
@@ -7079,11 +6925,6 @@
           "type": "cookie",
           "pattern": "phpbb3_",
           "weight": 60
-        },
-        {
-          "type": "html",
-          "pattern": "phpBB",
-          "weight": 40
         }
       ]
     },
@@ -7134,11 +6975,6 @@
           "type": "cookie",
           "pattern": "xf_session",
           "weight": 60
-        },
-        {
-          "type": "html",
-          "pattern": "XenForo",
-          "weight": 50
         },
         {
           "type": "window_properties",
@@ -9093,7 +8929,7 @@
         {
           "type": "window_properties",
           "pattern": "yotpo",
-          "weight": 60
+          "weight": 70
         },
         {
           "type": "network_requests",
@@ -9104,11 +8940,6 @@
           "type": "script",
           "pattern": "staticw2.yotpo.com",
           "weight": 60
-        },
-        {
-          "type": "window_properties",
-          "pattern": "yotpo",
-          "weight": 70
         }
       ]
     },
@@ -9269,7 +9100,7 @@
         {
           "type": "window_properties",
           "pattern": "GorgiasChat",
-          "weight": 60
+          "weight": 70
         },
         {
           "type": "network_requests",
@@ -9280,11 +9111,6 @@
           "type": "script",
           "pattern": "config.gorgias.chat",
           "weight": 60
-        },
-        {
-          "type": "window_properties",
-          "pattern": "GorgiasChat",
-          "weight": 70
         }
       ]
     },
@@ -11153,11 +10979,6 @@
           "type": "html",
           "pattern": "video-js",
           "weight": 50
-        },
-        {
-          "type": "window_properties",
-          "pattern": "videojs",
-          "weight": 60
         },
         {
           "type": "window_properties",
