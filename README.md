@@ -146,7 +146,7 @@ python wtscraper.py [FLAGS] [DOMAIN ...]
 | Flag                         | Description                                         |
 |:-----------------------------|:----------------------------------------------------|
 | `-h`, `--help`               | Show help message and exit                          |
-| `-if`, `--input_file`        | File containing domains (one per line)              |
+| `-if`, `--input_file`        | File containing domains (.txt or .parquet formats)  |
 | `-tf`, `--technologies_file` | Technologies JSON file (default: technologies.json) |
 | `-of`, `--output_file`       | Output file where results will be saved             |
 | `-p`, `--processes`          | Number of processes to use (default: 4)             |
